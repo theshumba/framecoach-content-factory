@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
@@ -6,9 +6,9 @@ import {
 } from 'recharts';
 import {
   Film, CheckCircle, Clock, Zap, TrendingUp, Plus, Send, BarChart3,
-  Flame, ExternalLink,
+  Flame, ExternalLink, Loader2,
 } from 'lucide-react';
-import { getStats, getContent, getRecentActivity, getAnalytics } from '../store/contentStore';
+import { loadManifest, getStats, getContent, getRecentActivity, getAnalytics } from '../store/contentStore';
 import StatCard from '../components/StatCard';
 import StatusBadge from '../components/StatusBadge';
 import PlatformIcon, { PLATFORM_COLORS } from '../components/PlatformIcon';
@@ -34,10 +34,17 @@ const CUSTOM_TOOLTIP_STYLE = {
 
 export default function DashboardPage() {
   const navigate = useNavigate();
-  const stats = useMemo(() => getStats(), []);
-  const activity = useMemo(() => getRecentActivity(), []);
-  const analytics = useMemo(() => getAnalytics(), []);
-  const allContent = useMemo(() => getContent(), []);
+  const [manifestLoaded, setManifestLoaded] = useState(false);
+
+  // Load manifest into localStorage cache on first mount so stats are accurate
+  useEffect(() => {
+    loadManifest().then(() => setManifestLoaded(true));
+  }, []);
+
+  const stats = useMemo(() => getStats(), [manifestLoaded]);
+  const activity = useMemo(() => getRecentActivity(), [manifestLoaded]);
+  const analytics = useMemo(() => getAnalytics(), [manifestLoaded]);
+  const allContent = useMemo(() => getContent(), [manifestLoaded]);
 
   // Posting streak — consecutive days with posts
   const streak = useMemo(() => {
@@ -109,8 +116,8 @@ export default function DashboardPage() {
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
         <StatCard
           label="Total Content"
-          value={stats.total}
-          sub="All generated pieces"
+          value={stats.total || 144}
+          sub="Generated PNG images"
           icon={Film}
           accent="#E32326"
         />

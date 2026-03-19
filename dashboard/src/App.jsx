@@ -6,7 +6,7 @@ import GalleryPage from './pages/GalleryPage';
 import TrackerPage from './pages/TrackerPage';
 import AnalyticsPage from './pages/AnalyticsPage';
 import SettingsPage from './pages/SettingsPage';
-import { initStore } from './store/contentStore';
+import { loadManifest } from './store/contentStore';
 
 function Layout({ children }) {
   return (
@@ -23,7 +23,8 @@ function Layout({ children }) {
 
 export default function App() {
   useEffect(() => {
-    initStore();
+    // Pre-warm the localStorage cache with manifest data on app load
+    loadManifest().catch(() => {});
   }, []);
 
   return (
