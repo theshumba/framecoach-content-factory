@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrameCoach — Bold Typography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: {{WIDTH}}px;
+    height: {{HEIGHT}}px;
+    overflow: hidden;
+    background: #141414;
+  }
+
+  .slide {
+    width: {{WIDTH}}px;
+    height: {{HEIGHT}}px;
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Large red accent block, partially visible, top-right */
+  .accent-block {
+    position: absolute;
+    top: {{ACCENT_TOP}}px;
+    right: {{ACCENT_RIGHT}}px;
+    width: {{ACCENT_W}}px;
+    height: {{ACCENT_H}}px;
+    background: #E32326;
+    opacity: 0.07;
+    transform: rotate(12deg);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Horizontal rule top accent */
+  .top-rule {
+    position: absolute;
+    top: {{TOP_RULE_Y}}px;
+    left: {{PAD}}px;
+    width: {{TOP_RULE_W}}px;
+    height: 3px;
+    background: #E32326;
+    z-index: 2;
+  }
+
+  .headline-block {
+    position: absolute;
+    top: {{HEADLINE_TOP}}px;
+    left: 0;
+    right: 0;
+    padding: 0 {{PAD}}px;
+    z-index: 3;
+  }
+
+  .headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: {{HEADLINE_SIZE}}px;
+    font-weight: 400;
+    color: #f7f7f7;
+    letter-spacing: {{HEADLINE_SPACING}}em;
+    line-height: 0.92;
+    text-transform: uppercase;
+    white-space: pre-line;
+  }
+
+  /* Red "stagger" accent on first line */
+  .headline-accent {
+    display: block;
+    color: #E32326;
+  }
+
+  .bottom-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: {{PAD}}px {{PAD}}px {{BOTTOM_PAD}}px;
+    display: flex;
+    flex-direction: column;
+    gap: {{BOTTOM_GAP}}px;
+    z-index: 3;
+  }
+
+  .bottom-rule {
+    width: {{BOTTOM_RULE_W}}px;
+    height: 1px;
+    background: rgba(247,247,247,0.15);
+  }
+
+  .body {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{BODY_SIZE}}px;
+    font-weight: 300;
+    color: #8E8E8E;
+    line-height: 1.6;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    max-width: {{BODY_MAX_WIDTH}}px;
+  }
+
+  .meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wordmark {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{WM_SIZE}}px;
+    font-weight: 600;
+    color: rgba(227,35,38,0.7);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .url {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{URL_SIZE}}px;
+    font-weight: 300;
+    color: rgba(247,247,247,0.3);
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="accent-block"></div>
+  <div class="top-rule"></div>
+
+  <div class="headline-block">
+    <h1 class="headline">{{HEADLINE}}</h1>
+  </div>
+
+  <div class="bottom-section">
+    <div class="bottom-rule"></div>
+    <p class="body">{{BODY}}</p>
+    <div class="meta-row">
+      <span class="wordmark">FrameCoach</span>
+      <span class="url">framecoach.io</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

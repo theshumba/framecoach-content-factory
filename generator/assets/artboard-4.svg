@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #d4d4d4;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-size: 10px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: #333;
+      }
+
+      .cls-2, .cls-7 {
+        font-family: Montserrat-Medium, Montserrat;
+        font-weight: 500;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9, .cls-10, .cls-11 {
+        font-family: ArchivoRoman-Bold, Archivo;
+        font-variation-settings: 'wght' 700, 'wdth' 100;
+      }
+
+      .cls-12 {
+        letter-spacing: .01em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-15 {
+        letter-spacing: 0em;
+      }
+
+      .cls-16 {
+        letter-spacing: 0em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-18 {
+        font-family: Montserrat-ExtraBold, Montserrat;
+      }
+
+      .cls-4 {
+        font-family: BebasNeueBold, 'Bebas Neue';
+        font-size: 60px;
+        letter-spacing: -.03em;
+      }
+
+      .cls-19, .cls-20 {
+        letter-spacing: 0em;
+      }
+
+      .cls-21, .cls-5, .cls-10 {
+        font-weight: 700;
+      }
+
+      .cls-21, .cls-6 {
+        font-size: 14px;
+      }
+
+      .cls-22 {
+        fill: #6b6c6c;
+      }
+
+      .cls-23 {
+        letter-spacing: 0em;
+      }
+
+      .cls-24, .cls-25 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-20, .cls-26, .cls-27, .cls-25, .cls-6, .cls-28, .cls-29 {
+        font-family: ArchivoRoman-Light, Archivo;
+        font-variation-settings: 'wght' 300, 'wdth' 100;
+        font-weight: 300;
+      }
+
+      .cls-30 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-31, .cls-29 {
+        letter-spacing: 0em;
+      }
+
+      .cls-27 {
+        letter-spacing: 0em;
+      }
+
+      .cls-32 {
+        letter-spacing: 0em;
+      }
+
+      .cls-33 {
+        letter-spacing: 0em;
+      }
+
+      .cls-34, .cls-28 {
+        font-size: 17px;
+      }
+
+      .cls-5 {
+        font-family: Couture-Bold, Couture;
+        font-size: 100px;
+      }
+
+      .cls-35 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-36 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-37 {
+        letter-spacing: 0em;
+      }
+
+      .cls-38 {
+        letter-spacing: 0em;
+      }
+
+      .cls-39 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-40 {
+        letter-spacing: 0em;
+      }
+
+      .cls-41 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11, .cls-42 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-43 {
+        fill: #e32326;
+      }
+
+      .cls-44 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(27.03 66)"><tspan x="0" y="0">02.</tspan></text>
+  <rect class="cls-3" y="181.36" width="841.89" height="1.23"/>
+  <text class="cls-5" transform="translate(27.03 161.12)"><tspan x="0" y="0">ICON</tspan></text>
+  <rect class="cls-3" x="30" y="182.72" width="1.23" height="420.52"/>
+  <text class="cls-3" transform="translate(489.41 212.6)"><tspan class="cls-34"><tspan class="cls-26" x="0" y="0">The </tspan><tspan class="cls-10" x="32.42" y="0">icon </tspan><tspan class="cls-26" x="70.69" y="0">should be used in place of the logo </tspan></tspan><tspan class="cls-28"><tspan x="0" y="20.4" xml:space="preserve">at small scales.  </tspan></tspan><tspan class="cls-28"><tspan x="0" y="61.2">This ensu</tspan><tspan class="cls-31" x="71.67" y="61.2">r</tspan><tspan x="76.89" y="61.2">es that no matte</tspan><tspan class="cls-24" x="195.44" y="61.2">r</tspan><tspan x="200.49" y="61.2" xml:space="preserve"> the si</tspan><tspan class="cls-24" x="243.31" y="61.2">z</tspan><tspan x="251.34" y="61.2">e of </tspan><tspan class="cls-19" x="281.82" y="61.2">y</tspan><tspan x="290.08" y="61.2">ou</tspan><tspan class="cls-24" x="308.93" y="61.2">r</tspan><tspan x="313.98" y="61.2"> </tspan></tspan><tspan class="cls-34"><tspan class="cls-26" x="0" y="81.6">b</tspan><tspan class="cls-29" x="9.44" y="81.6">r</tspan><tspan class="cls-26" x="14.65" y="81.6">anding, </tspan><tspan class="cls-20" x="73.01" y="81.6">y</tspan><tspan class="cls-26" x="81.28" y="81.6">ou</tspan><tspan class="cls-25" x="100.13" y="81.6">r</tspan><tspan class="cls-26" x="105.18" y="81.6" xml:space="preserve"> business will ha</tspan><tspan class="cls-27" x="223.84" y="81.6">v</tspan><tspan class="cls-26" x="232.1" y="81.6">e a leg</tspan><tspan class="cls-7" x="279.73" y="81.6">i</tspan><tspan class="cls-26" x="284.47" y="81.6">ble </tspan></tspan><tspan class="cls-34"><tspan class="cls-26" x="0" y="102">logo at any scale</tspan><tspan class="cls-7" x="122.62" y="102">.</tspan></tspan><tspan class="cls-21"><tspan class="cls-9" x="0" y="139.2">Whe</tspan><tspan class="cls-11" x="30.1" y="139.2">r</tspan><tspan class="cls-9" x="35.28" y="139.2">e to use</tspan><tspan class="cls-18" x="86.69" y="139.2">:</tspan></tspan></text>
+  <line class="cls-1" x1="444.32" y1="199.4" x2="49.94" y2="199.4"/>
+  <line class="cls-1" x1="444.32" y1="578.68" x2="49.94" y2="578.68"/>
+  <line class="cls-1" x1="50.32" y1="578.68" x2="50.32" y2="199.4"/>
+  <line class="cls-1" x1="444.7" y1="578.68" x2="444.7" y2="199.4"/>
+  <text class="cls-6" transform="translate(489.41 381.67)"><tspan x="0" y="0">Social Media P</tspan><tspan class="cls-42" x="90.84" y="0">r</tspan><tspan x="95.14" y="0">ofiles</tspan><tspan class="cls-8" x="0" y="16.8">F</tspan><tspan x="8.27" y="16.8">avicons</tspan><tspan x="0" y="33.6">B</tspan><tspan class="cls-42" x="9.73" y="33.6">r</tspan><tspan x="14.03" y="33.6">anded Me</tspan><tspan class="cls-16" x="74.88" y="33.6">r</tspan><tspan x="79.18" y="33.6">chandise</tspan></text>
+  <text class="cls-6" transform="translate(655.62 381.67)"><tspan x="0" y="0">Headers/</tspan><tspan class="cls-8" x="56.24" y="0">F</tspan><tspan x="64.51" y="0">ooters</tspan><tspan x="0" y="16.8">Digital Icons (Apps)</tspan><tspan class="cls-13" x="0" y="33.6">W</tspan><tspan x="12.12" y="33.6">atermar</tspan><tspan class="cls-30" x="59.74" y="33.6">k</tspan><tspan x="66.51" y="33.6">s</tspan></text>
+  <rect class="cls-43" x="365.19" y="34.03" width=".66" height="22.42"/>
+  <text class="cls-2" transform="translate(372.05 42.88)"><tspan class="cls-42" x="0" y="0">F</tspan><tspan class="cls-41" x="6.25" y="0">r</tspan><tspan x="10.27" y="0">a</tspan><tspan class="cls-40" x="16.25" y="0">m</tspan><tspan x="26.85" y="0">e</tspan><tspan class="cls-39" x="32.97" y="0">C</tspan><tspan class="cls-23" x="39.98" y="0">o</tspan><tspan class="cls-44" x="46.28" y="0">a</tspan><tspan class="cls-33" x="52.29" y="0">c</tspan><tspan x="57.93" y="0">h</tspan></text>
+  <rect class="cls-43" x="489.41" y="34.03" width=".66" height="22.42"/>
+  <text class="cls-2" transform="translate(496.27 42.88)"><tspan class="cls-14" x="0" y="0">V</tspan><tspan x="6.98" y="0">isual Identi</tspan><tspan class="cls-37" x="62.79" y="0">t</tspan><tspan x="66.83" y="0">y</tspan></text>
+  <rect class="cls-43" x="613.63" y="34.03" width=".66" height="22.42"/>
+  <text class="cls-2" transform="translate(620.49 42.88)"><tspan x="0" y="0">Janua</tspan><tspan class="cls-12" x="30.67" y="0">r</tspan><tspan x="34.92" y="0">y </tspan><tspan class="cls-15" x="43.2" y="0">202</tspan><tspan x="61.26" y="0">6</tspan></text>
+  <rect class="cls-43" x="737.84" y="34.03" width=".66" height="22.42"/>
+  <text class="cls-2" transform="translate(744.7 42.88)"><tspan class="cls-35" x="0" y="0">C</tspan><tspan x="7.06" y="0">u</tspan><tspan class="cls-38" x="13.83" y="0">r</tspan><tspan x="17.85" y="0">a</tspan><tspan class="cls-36" x="23.83" y="0">t</tspan><tspan x="27.79" y="0">ed </tspan><tspan class="cls-17" x="43.42" y="0">b</tspan><tspan x="50.09" y="0">y</tspan><tspan class="cls-32" x="0" y="12">D</tspan><tspan x="8.33" y="12">+N Studios</tspan></text>
+  <g>
+    <polygon class="cls-22" points="285.4 452.81 285.4 377.52 259.02 412.48 259.02 452.81 259.02 456.11 259.02 482.48 285.4 482.48 308.47 482.48 308.47 456.11 285.4 456.11 285.4 452.81"/>
+    <polygon class="cls-22" points="248.93 297.03 183.46 297.03 183.46 323.59 228.23 323.59 248.93 297.03"/>
+    <path class="cls-22" d="M156.62,323.59h19.89c1.77,0,3.2-1.45,3.2-3.23v-20.09c0-1.78-1.43-3.23-3.2-3.23h-34.93c-7.97,0-14.44,6.53-14.44,14.59v35.29c0,1.78,1.43,3.23,3.2,3.23h19.89c1.77,0,3.2-1.45,3.2-3.23v-20.09c0-1.78,1.43-3.23,3.2-3.23Z"/>
+    <path class="cls-22" d="M335.32,323.59h-19.89c-1.77,0-3.2-1.45-3.2-3.23v-20.09c0-1.78,1.43-3.23,3.2-3.23h23.08s11.84,0,11.84,0c7.97,0,14.44,6.53,14.44,14.59v11.97s0,23.32,0,23.32c0,1.78-1.43,3.23-3.2,3.23h-19.89c-1.77,0-3.2-1.45-3.2-3.23v-20.09c0-1.78-1.43-3.23-3.2-3.23Z"/>
+    <polygon class="cls-22" points="279.14 297.03 259.24 323.41 259.28 323.41 219.49 376.16 153.52 376.16 153.52 353.9 127.14 353.9 127.14 376.16 127.14 402.54 127.14 425.61 153.52 425.61 153.52 402.54 232.63 402.54 232.64 402.54 232.64 402.52 291.95 323.89 308.47 323.89 308.47 323.41 308.47 320.13 308.47 297.03 279.14 297.03"/>
+    <path class="cls-22" d="M156.62,455.93h19.89c1.77,0,3.2,1.45,3.2,3.23v20.09c0,1.78-1.43,3.23-3.2,3.23h-34.93c-7.97,0-14.44-6.53-14.44-14.59v-35.29c0-1.78,1.43-3.23,3.2-3.23h19.89c1.77,0,3.2,1.45,3.2,3.23v20.09c0,1.78,1.43,3.23,3.2,3.23Z"/>
+    <path class="cls-22" d="M335.32,455.93h-19.89c-1.77,0-3.2,1.45-3.2,3.23v20.09c0,1.78,1.43,3.23,3.2,3.23h23.08s11.84,0,11.84,0c7.97,0,14.44-6.53,14.44-14.59v-11.97s0-23.32,0-23.32c0-1.78-1.43-3.23-3.2-3.23h-19.89c-1.77,0-3.2,1.45-3.2,3.23v20.09c0,1.78-1.43,3.23-3.2,3.23Z"/>
+  </g>
+</svg>

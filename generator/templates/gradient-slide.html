@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrameCoach — Gradient Slide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: {{WIDTH}}px;
+    height: {{HEIGHT}}px;
+    overflow: hidden;
+    background: #141414;
+  }
+
+  .slide {
+    width: {{WIDTH}}px;
+    height: {{HEIGHT}}px;
+    background: linear-gradient(170deg, #141414 0%, #1a0a0a 45%, #E32326 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Top dark overlay to ensure gradient reads well */
+  .slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(20,20,20,0.6) 0%, transparent 50%, rgba(227,35,38,0.2) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Grain texture */
+  .slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    pointer-events: none;
+    opacity: 0.25;
+    z-index: 2;
+    mix-blend-mode: overlay;
+  }
+
+  .logo-top {
+    margin-top: {{LOGO_TOP}}px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: {{LOGO_GAP}}px;
+  }
+
+  .logo-icon {
+    width: {{LOGO_SIZE}}px;
+    height: {{LOGO_SIZE}}px;
+  }
+
+  .logo-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{LOGO_LABEL_SIZE}}px;
+    font-weight: 600;
+    color: rgba(247,247,247,0.85);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    padding: 0 {{PAD}}px;
+    text-align: center;
+  }
+
+  .headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: {{HEADLINE_SIZE}}px;
+    font-weight: 400;
+    color: #f7f7f7;
+    letter-spacing: 0.03em;
+    line-height: 0.95;
+    text-transform: uppercase;
+    white-space: pre-line;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.6);
+  }
+
+  .divider {
+    width: {{DIVIDER_WIDTH}}px;
+    height: {{DIVIDER_HEIGHT}}px;
+    background: rgba(247,247,247,0.4);
+    margin: {{DIVIDER_MARGIN}}px auto;
+  }
+
+  .body {
+    position: absolute;
+    bottom: {{BODY_BOTTOM}}px;
+    left: {{PAD}}px;
+    right: {{PAD}}px;
+    font-family: 'Poppins', sans-serif;
+    font-size: {{BODY_SIZE}}px;
+    font-weight: 300;
+    color: rgba(247,247,247,0.88);
+    line-height: 1.55;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    z-index: 5;
+  }
+
+  .url-tag {
+    position: absolute;
+    bottom: {{URL_BOTTOM}}px;
+    right: {{PAD}}px;
+    font-family: 'Poppins', sans-serif;
+    font-size: {{URL_SIZE}}px;
+    font-weight: 400;
+    color: rgba(247,247,247,0.5);
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    z-index: 5;
+  }
+
+  /* Triple chevrons decorative element */
+  .chevrons {
+    position: absolute;
+    left: {{PAD}}px;
+    bottom: {{URL_BOTTOM}}px;
+    display: flex;
+    gap: {{CHEV_GAP}}px;
+    z-index: 5;
+  }
+
+  .chev {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: {{CHEV_SIZE}}px;
+    color: rgba(247,247,247,0.3);
+    line-height: 1;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <!-- Logo top center -->
+  <div class="logo-top">
+    <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 22 L8 8 L22 8" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M52 22 L52 8 L38 8" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M8 38 L8 52 L22 52" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M52 38 L52 52 L38 52" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="30" y="36" font-family="'Bebas Neue', sans-serif" font-size="20" fill="white" text-anchor="middle" letter-spacing="1">FC</text>
+    </svg>
+    <span class="logo-label">FrameCoach</span>
+  </div>
+
+  <!-- Center headline -->
+  <div class="middle">
+    <h1 class="headline">{{HEADLINE}}</h1>
+    <div class="divider"></div>
+  </div>
+
+  <!-- Bottom body copy -->
+  <p class="body">{{BODY}}</p>
+
+  <!-- Bottom left chevrons -->
+  <div class="chevrons">
+    <span class="chev">&gt;</span>
+    <span class="chev">&gt;</span>
+    <span class="chev">&gt;</span>
+  </div>
+
+  <!-- Bottom right URL -->
+  <span class="url-tag">framecoach.io</span>
+</div>
+</body>
+</html>

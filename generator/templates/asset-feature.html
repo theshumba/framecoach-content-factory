@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrameCoach — Asset Feature</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: {{WIDTH}}px;
+    height: {{HEIGHT}}px;
+    overflow: hidden;
+    background: #141414;
+  }
+
+  .slide {
+    width: {{WIDTH}}px;
+    height: {{HEIGHT}}px;
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: {{PAD}}px;
+    gap: {{GAP}}px;
+  }
+
+  /* Radial highlight behind asset */
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: {{GLOW_SIZE}}px;
+    height: {{GLOW_SIZE}}px;
+    background: radial-gradient(circle, rgba(227,35,38,0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Top left brackets accent */
+  .tl-bracket {
+    position: absolute;
+    top: {{TL_OFFSET}}px;
+    left: {{TL_OFFSET}}px;
+    width: {{BRACKET_SIZE}}px;
+    height: {{BRACKET_SIZE}}px;
+    z-index: 2;
+  }
+
+  /* Top right brackets */
+  .tr-bracket {
+    position: absolute;
+    top: {{TL_OFFSET}}px;
+    right: {{TL_OFFSET}}px;
+    width: {{BRACKET_SIZE}}px;
+    height: {{BRACKET_SIZE}}px;
+    transform: scaleX(-1);
+    z-index: 2;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: {{GAP}}px;
+    z-index: 3;
+    width: 100%;
+  }
+
+  /* Giant X mark or chevrons — alternates per content index */
+  .brand-asset {
+    width: {{ASSET_SIZE}}px;
+    height: {{ASSET_SIZE}}px;
+    flex-shrink: 0;
+  }
+
+  .headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: {{HEADLINE_SIZE}}px;
+    font-weight: 400;
+    color: #f7f7f7;
+    letter-spacing: 0.02em;
+    line-height: 0.96;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: pre-line;
+  }
+
+  .divider {
+    width: {{DIV_W}}px;
+    height: 2px;
+    background: #E32326;
+    flex-shrink: 0;
+  }
+
+  .body {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{BODY_SIZE}}px;
+    font-weight: 300;
+    color: #ACACAB;
+    line-height: 1.58;
+    text-align: center;
+    font-style: italic;
+    max-width: {{BODY_MAX_WIDTH}}px;
+    letter-spacing: 0.01em;
+  }
+
+  .bottom-bar {
+    position: absolute;
+    bottom: {{BB_BOTTOM}}px;
+    left: {{PAD}}px;
+    right: {{PAD}}px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+  }
+
+  .chevron-row {
+    display: flex;
+    gap: {{CHEV_GAP}}px;
+  }
+
+  .chev {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: {{CHEV_SIZE}}px;
+    color: #E32326;
+    line-height: 1;
+    opacity: 0.7;
+  }
+
+  .url {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{URL_SIZE}}px;
+    font-weight: 400;
+    color: rgba(247,247,247,0.35);
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <!-- Corner brackets -->
+  <svg class="tl-bracket" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 28 L2 2 L28 2" stroke="#E32326" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+  </svg>
+  <svg class="tr-bracket" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 28 L2 2 L28 2" stroke="#E32326" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+  </svg>
+
+  <div class="content">
+    <!-- Bold X mark brand asset -->
+    <svg class="brand-asset" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Bold X -->
+      <line x1="30" y1="30" x2="170" y2="170" stroke="#E32326" stroke-width="22" stroke-linecap="round"/>
+      <line x1="170" y1="30" x2="30" y2="170" stroke="#E32326" stroke-width="22" stroke-linecap="round"/>
+      <!-- Small circle at center -->
+      <circle cx="100" cy="100" r="10" fill="#141414"/>
+    </svg>
+
+    <h1 class="headline">{{HEADLINE}}</h1>
+    <div class="divider"></div>
+    <p class="body">{{BODY}}</p>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="bottom-bar">
+    <div class="chevron-row">
+      <span class="chev">&gt;</span>
+      <span class="chev">&gt;</span>
+      <span class="chev">&gt;</span>
+    </div>
+    <span class="url">framecoach.io</span>
+  </div>
+</div>
+</body>
+</html>

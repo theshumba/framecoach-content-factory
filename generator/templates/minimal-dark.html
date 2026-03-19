@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrameCoach — Minimal Dark</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: {{WIDTH}}px;
+    height: {{HEIGHT}}px;
+    overflow: hidden;
+    background: #141414;
+  }
+
+  .slide {
+    width: {{WIDTH}}px;
+    height: {{HEIGHT}}px;
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: {{PAD}}px;
+  }
+
+  /* Very subtle red glow in bottom-right */
+  .slide::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: {{GLOW_W}}px;
+    height: {{GLOW_H}}px;
+    background: radial-gradient(circle at bottom right, rgba(227,35,38,0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Horizontal rule under logo */
+  .logo-rule {
+    position: absolute;
+    top: {{RULE_TOP}}px;
+    left: {{PAD}}px;
+    right: {{PAD}}px;
+    height: 1px;
+    background: rgba(247,247,247,0.1);
+    z-index: 2;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: {{LOGO_GAP}}px;
+    z-index: 3;
+    margin-bottom: {{LOGO_MB}}px;
+  }
+
+  .logo-icon {
+    width: {{LOGO_SIZE}}px;
+    height: {{LOGO_SIZE}}px;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{LOGO_TEXT_SIZE}}px;
+    font-weight: 600;
+    color: #f7f7f7;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .logo-dot {
+    width: {{DOT_SIZE}}px;
+    height: {{DOT_SIZE}}px;
+    background: #E32326;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 3;
+  }
+
+  /* Vertical left accent line */
+  .left-rule {
+    position: absolute;
+    left: {{RULE_LEFT}}px;
+    top: {{RULE_TOP_PX}}px;
+    bottom: {{RULE_BOTTOM_PX}}px;
+    width: 3px;
+    background: linear-gradient(to bottom, #E32326 0%, rgba(227,35,38,0.15) 100%);
+    z-index: 3;
+  }
+
+  .headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: {{HEADLINE_SIZE}}px;
+    font-weight: 400;
+    color: #f7f7f7;
+    letter-spacing: 0.015em;
+    line-height: 0.95;
+    text-transform: uppercase;
+    white-space: pre-line;
+    padding-left: {{HEADLINE_PL}}px;
+  }
+
+  .bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: {{BOTTOM_GAP}}px;
+    z-index: 3;
+    padding-left: {{HEADLINE_PL}}px;
+  }
+
+  .body {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{BODY_SIZE}}px;
+    font-weight: 300;
+    color: #8E8E8E;
+    line-height: 1.6;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    max-width: {{BODY_MAX_WIDTH}}px;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: {{META_GAP}}px;
+  }
+
+  .meta-dot {
+    width: {{META_DOT}}px;
+    height: {{META_DOT}}px;
+    background: #E32326;
+    border-radius: 50%;
+  }
+
+  .url {
+    font-family: 'Poppins', sans-serif;
+    font-size: {{URL_SIZE}}px;
+    font-weight: 400;
+    color: rgba(247,247,247,0.35);
+    letter-spacing: 0.12em;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <!-- Logo row top -->
+  <div class="logo-row">
+    <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Viewfinder brackets -->
+      <path d="M5 18 L5 5 L18 5" stroke="#E32326" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M45 18 L45 5 L32 5" stroke="#E32326" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M5 32 L5 45 L18 45" stroke="#E32326" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M45 32 L45 45 L32 45" stroke="#E32326" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="25" y="30" font-family="'Bebas Neue', sans-serif" font-size="16" fill="#f7f7f7" text-anchor="middle" letter-spacing="0.5">FC</text>
+    </svg>
+    <span class="logo-text">FrameCoach</span>
+    <div class="logo-dot"></div>
+  </div>
+
+  <div class="logo-rule"></div>
+
+  <!-- Left vertical accent line -->
+  <div class="left-rule"></div>
+
+  <!-- Main content -->
+  <div class="main">
+    <h1 class="headline">{{HEADLINE}}</h1>
+  </div>
+
+  <!-- Bottom section -->
+  <div class="bottom">
+    <p class="body">{{BODY}}</p>
+    <div class="meta">
+      <div class="meta-dot"></div>
+      <span class="url">framecoach.io</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

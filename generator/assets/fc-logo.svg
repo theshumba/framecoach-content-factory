@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .01em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-15 {
+        letter-spacing: 0em;
+      }
+
+      .cls-16 {
+        letter-spacing: 0em;
+      }
+
+      .cls-17 {
+        font-family: AgencyFBBlack, 'AgencyFB Black';
+        font-size: 160px;
+      }
+
+      .cls-17, .cls-18 {
+        fill: #fff;
+      }
+
+      .cls-19 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-20 {
+        fill: #e32326;
+      }
+
+      .cls-18 {
+        font-family: Montserrat-Medium, Montserrat;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+      .cls-21 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect y="0" width="841.89" height="595.28"/>
+  <text class="cls-17" transform="translate(25.32 147.81)"><tspan x="0" y="0">VIS</tspan><tspan class="cls-7" x="198.56" y="0">U</tspan><tspan x="280.32" y="0">AL</tspan><tspan x="0" y="140">IDENTI</tspan><tspan class="cls-6" x="380.63" y="140">T</tspan><tspan x="453.91" y="140">Y</tspan></text>
+  <rect class="cls-20" x="365.19" y="538.83" width=".66" height="22.42"/>
+  <text class="cls-18" transform="translate(372.05 547.68)"><tspan class="cls-19" x="0" y="0">F</tspan><tspan class="cls-16" x="6.25" y="0">r</tspan><tspan x="10.27" y="0">a</tspan><tspan class="cls-15" x="16.25" y="0">m</tspan><tspan x="26.85" y="0">e</tspan><tspan class="cls-14" x="32.97" y="0">C</tspan><tspan class="cls-5" x="39.98" y="0">o</tspan><tspan class="cls-21" x="46.28" y="0">a</tspan><tspan class="cls-9" x="52.29" y="0">c</tspan><tspan x="57.93" y="0">h</tspan></text>
+  <rect class="cls-20" x="489.41" y="538.83" width=".66" height="22.42"/>
+  <text class="cls-18" transform="translate(496.27 547.68)"><tspan class="cls-2" x="0" y="0">V</tspan><tspan x="6.98" y="0">isual Identi</tspan><tspan class="cls-12" x="62.79" y="0">t</tspan><tspan x="66.83" y="0">y</tspan></text>
+  <rect class="cls-20" x="613.63" y="538.83" width=".66" height="22.42"/>
+  <text class="cls-18" transform="translate(620.49 547.68)"><tspan x="0" y="0">Janua</tspan><tspan class="cls-1" x="30.67" y="0">r</tspan><tspan x="34.92" y="0">y </tspan><tspan class="cls-3" x="43.2" y="0">202</tspan><tspan x="61.26" y="0">6</tspan></text>
+  <rect class="cls-20" x="737.84" y="538.83" width=".66" height="22.42"/>
+  <text class="cls-18" transform="translate(744.7 547.68)"><tspan class="cls-10" x="0" y="0">C</tspan><tspan x="7.06" y="0">u</tspan><tspan class="cls-13" x="13.83" y="0">r</tspan><tspan x="17.85" y="0">a</tspan><tspan class="cls-11" x="23.83" y="0">t</tspan><tspan x="27.79" y="0">ed </tspan><tspan class="cls-4" x="43.42" y="0">b</tspan><tspan x="50.09" y="0">y</tspan><tspan class="cls-8" x="0" y="12">D</tspan><tspan x="8.33" y="12">+N Studios</tspan></text>
+  <path class="cls-20" d="M756.8,93.78v46.01c0,4.09,3.31,7.4,7.4,7.4h46.01c4.09,0,7.4-3.31,7.4-7.4v-53.41s0-27.4,0-27.4c0-18.45-14.96-33.4-33.4-33.4h-27.4s-53.41,0-53.41,0c-4.09,0-7.4,3.31-7.4,7.4v46.01c0,4.09,3.31,7.4,7.4,7.4h46.01c4.09,0,7.4,3.31,7.4,7.4Z"/>
+  <path class="cls-20" d="M86.13,499.04v-46.01c0-4.09-3.31-7.4-7.4-7.4h-46.01c-4.09,0-7.4,3.31-7.4,7.4v53.41s0,27.4,0,27.4c0,18.45,14.96,33.4,33.4,33.4h27.4s53.41,0,53.41,0c4.09,0,7.4-3.31,7.4-7.4v-46.01c0-4.09-3.31-7.4-7.4-7.4h-46.01c-4.09,0-7.4-3.31-7.4-7.4Z"/>
+</svg>

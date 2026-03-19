@@ -1,0 +1,19 @@
+{
+  "name": "framecoach-content-factory",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "generate": "node generator/generate.js",
+    "dashboard": "cd dashboard && npm run dev",
+    "api": "node api/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "multer": "^2.1.1",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.39.1"
+  }
+}

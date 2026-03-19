@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .38em;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        font-size: 32px;
+      }
+
+      .cls-10 {
+        letter-spacing: .93em;
+      }
+
+      .cls-11 {
+        letter-spacing: .01em;
+      }
+
+      .cls-12 {
+        font-family: Montserrat-Medium, Montserrat;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+      .cls-12, .cls-13, .cls-14, .cls-15 {
+        fill: #333;
+      }
+
+      .cls-2 {
+        letter-spacing: .12em;
+      }
+
+      .cls-16 {
+        letter-spacing: .65em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.19em;
+      }
+
+      .cls-18 {
+        letter-spacing: .01em;
+      }
+
+      .cls-19 {
+        letter-spacing: .38em;
+      }
+
+      .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27 {
+        font-size: 26px;
+      }
+
+      .cls-28 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-29 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        letter-spacing: .93em;
+      }
+
+      .cls-30 {
+        letter-spacing: 0em;
+      }
+
+      .cls-31 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-20 {
+        letter-spacing: .57em;
+      }
+
+      .cls-14 {
+        font-family: BebasNeueBold, 'Bebas Neue';
+        font-size: 60px;
+        letter-spacing: -.03em;
+      }
+
+      .cls-32 {
+        font-size: 20px;
+      }
+
+      .cls-32, .cls-33 {
+        font-family: Poppins-Regular, Poppins;
+      }
+
+      .cls-34, .cls-35 {
+        font-family: RefrigeratorDeluxe-Heavy, 'Refrigerator Deluxe';
+        font-weight: 800;
+      }
+
+      .cls-21 {
+        letter-spacing: 1.18em;
+      }
+
+      .cls-36 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-36, .cls-37 {
+        font-size: 15px;
+      }
+
+      .cls-38 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-39 {
+        fill: none;
+        stroke: #d4d4d4;
+        stroke-miterlimit: 10;
+        stroke-width: 1.88px;
+      }
+
+      .cls-40 {
+        letter-spacing: .47em;
+      }
+
+      .cls-41 {
+        letter-spacing: 1.53em;
+      }
+
+      .cls-5 {
+        letter-spacing: .64em;
+      }
+
+      .cls-22, .cls-42 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-23 {
+        letter-spacing: .89em;
+      }
+
+      .cls-24 {
+        letter-spacing: .13em;
+      }
+
+      .cls-33 {
+        font-size: 31px;
+      }
+
+      .cls-33, .cls-43, .cls-35 {
+        fill: #010101;
+      }
+
+      .cls-44 {
+        letter-spacing: 0em;
+      }
+
+      .cls-25 {
+        letter-spacing: 1.18em;
+      }
+
+      .cls-45 {
+        letter-spacing: 0em;
+      }
+
+      .cls-15 {
+        font-family: Couture-Bold, Couture;
+        font-size: 100px;
+        font-weight: 700;
+      }
+
+      .cls-46 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-47 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-48 {
+        letter-spacing: 0em;
+      }
+
+      .cls-49 {
+        letter-spacing: 0em;
+      }
+
+      .cls-50 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        letter-spacing: .92em;
+      }
+
+      .cls-51 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-52 {
+        letter-spacing: 0em;
+      }
+
+      .cls-53 {
+        letter-spacing: 0em;
+      }
+
+      .cls-35 {
+        font-size: 39px;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-54 {
+        letter-spacing: 0em;
+      }
+
+      .cls-55 {
+        fill: #e32326;
+      }
+
+      .cls-56 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-9 {
+        letter-spacing: .93em;
+      }
+
+      .cls-57 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-14" transform="translate(31.34 62.08)"><tspan x="0" y="0">03.</tspan></text>
+  <text class="cls-15" transform="translate(31.33 157.2)"><tspan x="0" y="0">TYPOGRAPHY</tspan></text>
+  <text class="cls-35" transform="translate(47.94 432.88)"><tspan x="0" y="0">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</tspan><tspan x="0" y="39">1 2 3 4 5 6 7 8 9 0</tspan></text>
+  <text class="cls-33" transform="translate(47.94 540.05)"><tspan x="0" y="0">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</tspan><tspan x="0" y="30">1 2 3 4 5 6 7 8 9 0</tspan></text>
+  <text class="cls-12" transform="translate(48.55 201.16)"><tspan class="cls-56" x="0" y="0">E</tspan><tspan class="cls-48" x="6.58" y="0">x</tspan><tspan x="12" y="0">ample </tspan><tspan class="cls-49" x="46.97" y="0">f</tspan><tspan x="50.42" y="0">or la</tspan><tspan class="cls-56" x="72.33" y="0">r</tspan><tspan x="76.31" y="0">g</tspan><tspan class="cls-11" x="83.21" y="0">e</tspan><tspan class="cls-29" x="89.43" y="0">-</tspan><tspan class="cls-51" x="93.13" y="0">w</tspan><tspan x="101.97" y="0">eb sizi</tspan><tspan class="cls-52" x="133.4" y="0">n</tspan><tspan x="140.24" y="0">g. </tspan><tspan class="cls-11" x="152.1" y="0">(</tspan><tspan x="155.57" y="0">108</tspan><tspan class="cls-42" x="172.38" y="0">0</tspan><tspan class="cls-54" x="178.95" y="0">x</tspan><tspan x="184.55" y="0">1</tspan><tspan class="cls-30" x="188.25" y="0">92</tspan><tspan x="200.1" y="0">0)</tspan></text>
+  <rect class="cls-55" x="365.19" y="34.03" width=".66" height="22.42"/>
+  <text class="cls-12" transform="translate(372.05 42.88)"><tspan class="cls-42" x="0" y="0">F</tspan><tspan class="cls-53" x="6.25" y="0">r</tspan><tspan x="10.27" y="0">a</tspan><tspan class="cls-52" x="16.25" y="0">m</tspan><tspan x="26.85" y="0">e</tspan><tspan class="cls-50" x="32.97" y="0">C</tspan><tspan class="cls-38" x="39.98" y="0">o</tspan><tspan class="cls-57" x="46.28" y="0">a</tspan><tspan class="cls-45" x="52.29" y="0">c</tspan><tspan x="57.93" y="0">h</tspan></text>
+  <rect class="cls-55" x="489.41" y="34.03" width=".66" height="22.42"/>
+  <text class="cls-12" transform="translate(496.27 42.88)"><tspan class="cls-28" x="0" y="0">V</tspan><tspan x="6.98" y="0">isual Identi</tspan><tspan class="cls-48" x="62.79" y="0">t</tspan><tspan x="66.83" y="0">y</tspan></text>
+  <rect class="cls-55" x="613.63" y="34.03" width=".66" height="22.42"/>
+  <text class="cls-12" transform="translate(620.49 42.88)"><tspan x="0" y="0">Janua</tspan><tspan class="cls-18" x="30.67" y="0">r</tspan><tspan x="34.92" y="0">y </tspan><tspan class="cls-30" x="43.2" y="0">202</tspan><tspan x="61.26" y="0">6</tspan></text>
+  <rect class="cls-55" x="737.84" y="34.03" width=".66" height="22.42"/>
+  <text class="cls-12" transform="translate(744.7 42.88)"><tspan class="cls-46" x="0" y="0">C</tspan><tspan x="7.06" y="0">u</tspan><tspan class="cls-49" x="13.83" y="0">r</tspan><tspan x="17.85" y="0">a</tspan><tspan class="cls-47" x="23.83" y="0">t</tspan><tspan x="27.79" y="0">ed </tspan><tspan class="cls-31" x="43.42" y="0">b</tspan><tspan x="50.09" y="0">y</tspan><tspan class="cls-44" x="0" y="12">D</tspan><tspan x="8.33" y="12">+N Studios</tspan></text>
+  <line class="cls-39" x1="30" y1="326.93" x2="841.89" y2="326.93"/>
+  <line class="cls-39" x1="30" y1="265.82" x2="841.89" y2="265.82"/>
+  <text class="cls-43" transform="translate(47.94 241.79)"><tspan class="cls-34"><tspan class="cls-6" x="0" y="0">Refruge</tspan><tspan class="cls-8" x="89.21" y="0">r</tspan><tspan class="cls-6" x="98.27" y="0">ator Delu</tspan><tspan class="cls-4" x="200.64" y="0">x</tspan><tspan class="cls-6" x="213.05" y="0">e</tspan><tspan class="cls-37" x="226.56" y="0" xml:space="preserve"> He</tspan><tspan class="cls-36" x="243.06" y="0">a</tspan><tspan class="cls-37" x="249.1" y="0">vy</tspan><tspan class="cls-5" x="261.06" y="0">	</tspan><tspan class="cls-9" x="288" y="0" xml:space="preserve">		</tspan><tspan class="cls-6" x="360" y="0">Heading</tspan><tspan class="cls-1" x="449.54" y="0">	</tspan><tspan class="cls-3" x="468" y="0">	</tspan><tspan class="cls-6" x="504" y="0" xml:space="preserve">    </tspan><tspan class="cls-2" x="529.6" y="0">	</tspan><tspan class="cls-7" x="540" y="0" xml:space="preserve">		</tspan><tspan class="cls-6" x="612" y="0" xml:space="preserve">           62pt</tspan></tspan><tspan class="cls-34"><tspan class="cls-26" x="0" y="60">Refruge</tspan><tspan class="cls-27" x="72.49" y="60">r</tspan><tspan class="cls-26" x="79.84" y="60">ator Delu</tspan><tspan class="cls-22" x="163.02" y="60">x</tspan><tspan class="cls-26" x="173.1" y="60">e </tspan><tspan class="cls-37" x="189.28" y="60">He</tspan><tspan class="cls-36" x="202.78" y="60">a</tspan><tspan class="cls-37" x="208.82" y="60">vy </tspan><tspan class="cls-23" x="223.78" y="60">	</tspan><tspan class="cls-25" x="252" y="60" xml:space="preserve">		</tspan><tspan class="cls-26" x="324" y="60" xml:space="preserve">    Sub-Heading</tspan><tspan class="cls-24" x="459.3" y="60">	</tspan><tspan class="cls-21" x="468" y="60">	</tspan><tspan class="cls-26" x="504" y="60" xml:space="preserve">    </tspan><tspan class="cls-19" x="524.8" y="60">	</tspan><tspan class="cls-21" x="540" y="60">	</tspan><tspan class="cls-26" x="576" y="60" xml:space="preserve">          </tspan><tspan class="cls-20" x="628" y="60">	</tspan><tspan class="cls-21" x="648" y="60">	</tspan><tspan class="cls-26" x="684" y="60">38pt</tspan></tspan><tspan class="cls-32"><tspan x="0" y="120">Poppins Regular</tspan><tspan class="cls-16" x="161.7" y="120">	</tspan><tspan class="cls-41" x="180" y="120" xml:space="preserve">				</tspan><tspan x="324" y="120" xml:space="preserve">          Copy</tspan><tspan class="cls-17" x="430.42" y="120">	</tspan><tspan class="cls-41" x="432" y="120">	</tspan><tspan x="468" y="120" xml:space="preserve">    </tspan><tspan class="cls-40" x="489.36" y="120">	</tspan><tspan class="cls-41" x="504" y="120" xml:space="preserve">		</tspan><tspan x="576" y="120" xml:space="preserve">         </tspan><tspan class="cls-10" x="624.06" y="120">	</tspan><tspan x="648" y="120" xml:space="preserve">       20pt</tspan></tspan></text>
+  <line class="cls-39" x1="30" y1="384.89" x2="841.89" y2="384.89"/>
+  <line class="cls-39" x1="30" y1="494.44" x2="841.89" y2="494.44"/>
+  <rect class="cls-13" y="181.98" width="841.89" height="1.23"/>
+  <rect class="cls-13" x="30" y="182.59" width="1.23" height="416.61"/>
+</svg>
