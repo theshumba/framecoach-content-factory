@@ -2,10 +2,13 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   Filter, Search, X, Eye, CheckSquare, Square, Tag,
   ExternalLink, Check, Copy, Instagram, Hash, Loader2,
-  AlertCircle, RefreshCw,
+  AlertCircle, RefreshCw, Download,
 } from 'lucide-react';
-import { loadManifest, updateContent } from '../store/contentStore';
+import { loadManifest, updateContent, loadInstagramCarousels } from '../store/contentStore';
 import StatusBadge from '../components/StatusBadge';
+import CarouselCard from '../components/CarouselCard';
+import CarouselViewer from '../components/CarouselViewer';
+import DownloadButton from '../components/DownloadButton';
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -24,6 +27,8 @@ const TEMPLATE_COLORS = {
   'asset-feature':   '#22C55E',
   'minimal-dark':    '#EC4899',
 };
+
+const IG_BASE_PATH = `${import.meta.env.BASE_URL}instagram-carousels/`;
 
 // ---------------------------------------------------------------------------
 // Copy-to-clipboard helper with toast feedback
@@ -44,6 +49,24 @@ function useCopyToast() {
   }, []);
 
   return { toast, copy };
+}
+
+// ---------------------------------------------------------------------------
+// Download helper (fetch + blob)
+// ---------------------------------------------------------------------------
+
+async function triggerDownload(url, filename) {
+  try {
+    const res = await fetch(url);
+    const blob = await res.blob();
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename || url.split('/').pop() || 'download.png';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  } catch (err) {
+    console.error('Download failed:', err);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -101,6 +124,15 @@ function ContentCard({ item, selected, onSelect, onClick }) {
             </p>
           </div>
         )}
+
+        {/* Download overlay button */}
+        <button
+          className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity w-7 h-7 flex items-center justify-center bg-black/60 hover:bg-[#E32326] rounded-lg text-white"
+          onClick={e => { e.stopPropagation(); if (item.imageUrl) triggerDownload(item.imageUrl, item.filename || `${item.id}.png`); }}
+          title="Download image"
+        >
+          <Download size={13} />
+        </button>
 
         {/* Format badge */}
         <div
@@ -316,6 +348,16 @@ function ContentModal({ item, onClose, onUpdate }) {
               <Copy size={13} className="text-[#E32326]" />
               Copy Caption + Hashtags ({activeTab === 'instagram' ? 'Instagram' : 'TikTok'})
             </button>
+
+            {/* Download button */}
+            {item.imageUrl && (
+              <DownloadButton
+                url={item.imageUrl}
+                filename={item.filename || `${item.id}.png`}
+                label="Download Image"
+                className="w-full justify-center"
+              />
+            )}
           </div>
         </div>
 
@@ -405,8 +447,64 @@ function ContentModal({ item, onClose, onUpdate }) {
 // ---------------------------------------------------------------------------
 
 export default function GalleryPage() {
+  // --- Tab state from URL hash ---
+  const getTabFromHash = () => {
+    const hash = window.location.hash.replace('#', '');
+    return hash === 'tiktok' ? 'tiktok' : 'instagram';
+  };
+
+  const [activeMainTab, setActiveMainTab] = useState(getTabFromHash);
+
+  const switchTab = useCallback((tab) => {
+    setActiveMainTab(tab);
+    window.location.hash = tab;
+  }, []);
+
+  useEffect(() => {
+    const onHashChange = () => setActiveMainTab(getTabFromHash());
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  // --- Instagram Carousels state ---
+  const [carousels, setCarousels] = useState([]);
+  const [carouselsLoading, setCarouselsLoading] = useState(false);
+  const [carouselsLoaded, setCarouselsLoaded] = useState(false);
+  const [igSearch, setIgSearch] = useState('');
+  const [viewerCarousel, setViewerCarousel] = useState(null);
+
+  const loadCarousels = useCallback(async () => {
+    setCarouselsLoading(true);
+    try {
+      const data = await loadInstagramCarousels();
+      setCarousels(data);
+    } catch {
+      setCarousels([]);
+    } finally {
+      setCarouselsLoading(false);
+      setCarouselsLoaded(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (activeMainTab === 'instagram' && !carouselsLoaded) {
+      loadCarousels();
+    }
+  }, [activeMainTab, carouselsLoaded, loadCarousels]);
+
+  const filteredCarousels = useMemo(() => {
+    if (!igSearch) return carousels;
+    const q = igSearch.toLowerCase();
+    return carousels.filter(c =>
+      c.name?.toLowerCase().includes(q) ||
+      c.subtitle?.toLowerCase().includes(q)
+    );
+  }, [carousels, igSearch]);
+
+  // --- TikTok Content state ---
   const [content, setContent] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [contentLoaded, setContentLoaded] = useState(false);
   const [apiError, setApiError] = useState(false);
 
   const [search, setSearch] = useState('');
@@ -418,22 +516,26 @@ export default function GalleryPage() {
   const [expandedItem, setExpandedItem] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
 
-  // Load manifest on mount
   const loadContent = useCallback(async () => {
     setLoading(true);
     setApiError(false);
     try {
       const items = await loadManifest();
       setContent(items);
-      if (items.length === 0) setApiError(true);
+      if (items.length === 0) setApiError(true); else setApiError(false);
     } catch {
       setApiError(true);
     } finally {
       setLoading(false);
+      setContentLoaded(true);
     }
   }, []);
 
-  useEffect(() => { loadContent(); }, [loadContent]);
+  useEffect(() => {
+    if (activeMainTab === 'tiktok' && !contentLoaded) {
+      loadContent();
+    }
+  }, [activeMainTab, contentLoaded, loadContent]);
 
   const filtered = useMemo(() => {
     return content.filter(item => {
@@ -487,225 +589,354 @@ export default function GalleryPage() {
 
   const activeFilters = [filterFormat, filterCategory, filterStatus, filterTemplate].filter(f => f !== 'All').length;
 
-  // Loading state
-  if (loading) {
+  // Collect download URLs for selected items (bulk download)
+  const selectedDownloadUrls = useMemo(() => {
+    return filtered
+      .filter(item => selected.has(item.id) && item.imageUrl)
+      .map(item => item.imageUrl);
+  }, [filtered, selected]);
+
+  // -----------------------------------------------------------------------
+  // Tab bar
+  // -----------------------------------------------------------------------
+
+  const tabBar = (
+    <div className="flex items-center gap-2 p-1 bg-[#1C1C1C] rounded-xl w-fit">
+      <button
+        onClick={() => switchTab('instagram')}
+        className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          activeMainTab === 'instagram'
+            ? 'bg-[#E32326] text-white'
+            : 'text-[#8E8E8E] hover:text-[#f7f7f7]'
+        }`}
+      >
+        Instagram Carousels{carousels.length > 0 ? ` (${carousels.length})` : ''}
+      </button>
+      <button
+        onClick={() => switchTab('tiktok')}
+        className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          activeMainTab === 'tiktok'
+            ? 'bg-[#E32326] text-white'
+            : 'text-[#8E8E8E] hover:text-[#f7f7f7]'
+        }`}
+      >
+        TikTok Content{content.length > 0 ? ` (${content.length})` : ''}
+      </button>
+    </div>
+  );
+
+  // -----------------------------------------------------------------------
+  // Instagram Carousels tab content
+  // -----------------------------------------------------------------------
+
+  const renderInstagramTab = () => {
+    if (carouselsLoading) {
+      return (
+        <div className="flex flex-col items-center justify-center py-32 gap-4">
+          <Loader2 size={32} className="text-[#E32326] animate-spin" />
+          <div className="text-[#8E8E8E] text-sm">Loading Instagram carousels...</div>
+        </div>
+      );
+    }
+
     return (
-      <div className="flex flex-col items-center justify-center py-32 gap-4">
-        <Loader2 size={32} className="text-[#E32326] animate-spin" />
-        <div className="text-[#8E8E8E] text-sm">Loading 144 generated images...</div>
-      </div>
-    );
-  }
-
-  // API error state
-  if (apiError) {
-    return (
-      <div className="flex flex-col items-center justify-center py-32 gap-4">
-        <AlertCircle size={36} className="text-[#F59E0B] opacity-70" />
-        <div className="text-[#f7f7f7] text-base font-medium">API server not running</div>
-        <div className="text-[#8E8E8E] text-sm text-center max-w-xs">
-          Start the API with <code className="bg-[#1C1C1C] px-1.5 py-0.5 rounded text-[#E32326] text-xs">node api/server.js</code> then refresh.
-        </div>
-        <button
-          onClick={loadContent}
-          className="flex items-center gap-2 px-4 py-2 bg-[#E32326] hover:bg-[#B91C1F] text-white text-sm font-medium rounded-lg transition-colors mt-2"
-        >
-          <RefreshCw size={14} /> Retry
-        </button>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-5">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-[#f7f7f7] text-2xl font-bold">Content Gallery</h1>
-          <p className="text-[#8E8E8E] text-sm mt-0.5">
-            {filtered.length} of {content.length} items
-            {content.length > 0 && <span className="text-[#E32326]"> · {content.length} real images</span>}
-          </p>
-        </div>
-        <div className="flex items-center gap-3">
-          {selected.size > 0 && (
-            <>
-              <span className="text-[#8E8E8E] text-sm">{selected.size} selected</span>
-              <button
-                onClick={handleBulkMarkPosted}
-                className="px-4 py-2 bg-[#22C55E]/15 border border-[#22C55E]/20 text-[#22C55E] text-sm font-medium rounded-lg hover:bg-[#22C55E]/25 transition-colors"
-              >
-                Mark Posted
-              </button>
-              <button onClick={() => setSelected(new Set())} className="text-[#8E8E8E] hover:text-[#f7f7f7]">
-                <X size={16} />
-              </button>
-            </>
-          )}
-          <button
-            onClick={loadContent}
-            className="w-8 h-8 flex items-center justify-center text-[#8E8E8E] hover:text-[#f7f7f7] bg-[#1C1C1C] border border-[#2A2A2A] rounded-lg transition-colors"
-            title="Reload from API"
-          >
-            <RefreshCw size={14} />
-          </button>
-        </div>
-      </div>
-
-      {/* Search + filter toggle */}
-      <div className="flex gap-3">
-        <div className="flex-1 relative">
+      <div className="space-y-5">
+        {/* Search */}
+        <div className="relative">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8E8E8E]" />
           <input
             type="text"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            placeholder="Search headlines or captions..."
+            value={igSearch}
+            onChange={e => setIgSearch(e.target.value)}
+            placeholder="Search carousels by name or subtitle..."
             className="w-full pl-9 pr-4 py-2.5 bg-[#141414] border border-[#2A2A2A] rounded-lg text-[#f7f7f7] text-sm placeholder-[#8E8E8E]/50 focus:outline-none focus:border-[#E32326]/50"
           />
         </div>
-        <button
-          onClick={() => setShowFilters(!showFilters)}
-          className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors ${
-            showFilters || activeFilters > 0
-              ? 'bg-[#E32326]/10 border-[#E32326]/30 text-[#E32326]'
-              : 'bg-[#141414] border-[#2A2A2A] text-[#8E8E8E] hover:text-[#f7f7f7]'
-          }`}
-        >
-          <Filter size={14} />
-          Filters
-          {activeFilters > 0 && (
-            <span className="w-5 h-5 flex items-center justify-center bg-[#E32326] text-white rounded-full text-xs">
-              {activeFilters}
-            </span>
-          )}
-        </button>
-      </div>
 
-      {/* Filter panel */}
-      {showFilters && (
-        <div className="bg-[#141414] border border-[#2A2A2A] rounded-xl p-4 space-y-4">
-          <div className="flex flex-wrap gap-6">
-            {/* Format */}
-            <div>
-              <div className="text-[#8E8E8E] text-xs uppercase tracking-wider mb-2">Format</div>
-              <div className="flex gap-1.5">
-                {FORMAT_OPTIONS.map(f => (
-                  <button key={f} onClick={() => setFilterFormat(f)}
-                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
-                      filterFormat === f ? 'bg-[#E32326] text-white' : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
-                    }`}>
-                    {f}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Category */}
-            <div>
-              <div className="text-[#8E8E8E] text-xs uppercase tracking-wider mb-2">Category</div>
-              <div className="flex gap-1.5 flex-wrap">
-                {CATEGORY_OPTIONS.map(c => (
-                  <button key={c} onClick={() => setFilterCategory(c)}
-                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
-                      filterCategory === c ? 'bg-[#E32326] text-white' : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
-                    }`}>
-                    {c}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Status */}
-            <div>
-              <div className="text-[#8E8E8E] text-xs uppercase tracking-wider mb-2">Status</div>
-              <div className="flex gap-1.5 flex-wrap">
-                {STATUS_OPTIONS.map(s => (
-                  <button key={s} onClick={() => setFilterStatus(s)}
-                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
-                      filterStatus === s ? 'bg-[#E32326] text-white' : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
-                    }`}>
-                    {s}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Template */}
-            <div>
-              <div className="text-[#8E8E8E] text-xs uppercase tracking-wider mb-2">Template</div>
-              <div className="flex gap-1.5 flex-wrap">
-                {TEMPLATE_OPTIONS.map(t => (
-                  <button key={t} onClick={() => setFilterTemplate(t)}
-                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
-                      filterTemplate === t ? 'bg-[#E32326] text-white' : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
-                    }`}>
-                    {t}
-                  </button>
-                ))}
-              </div>
+        {/* Grid or empty state */}
+        {filteredCarousels.length === 0 ? (
+          <div className="text-center py-20 text-[#8E8E8E]">
+            <Tag size={40} className="mx-auto mb-4 opacity-30" />
+            <div className="text-lg font-medium mb-1">No carousels found</div>
+            <div className="text-sm">
+              {igSearch ? 'Try adjusting your search' : 'No carousel data available'}
             </div>
           </div>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {filteredCarousels.map(carousel => (
+              <CarouselCard
+                key={carousel.id}
+                carousel={carousel}
+                basePath={IG_BASE_PATH}
+                onClick={setViewerCarousel}
+              />
+            ))}
+          </div>
+        )}
 
-          {activeFilters > 0 && (
-            <button
-              onClick={() => { setFilterFormat('All'); setFilterCategory('All'); setFilterStatus('All'); setFilterTemplate('All'); }}
-              className="text-[#E32326] text-xs hover:underline"
-            >
-              Clear all filters
-            </button>
-          )}
+        {/* Carousel Viewer Modal */}
+        {viewerCarousel && (
+          <CarouselViewer
+            carousel={viewerCarousel}
+            basePath={IG_BASE_PATH}
+            onClose={() => setViewerCarousel(null)}
+          />
+        )}
+      </div>
+    );
+  };
+
+  // -----------------------------------------------------------------------
+  // TikTok Content tab content
+  // -----------------------------------------------------------------------
+
+  const renderTikTokTab = () => {
+    // Loading state
+    if (loading) {
+      return (
+        <div className="flex flex-col items-center justify-center py-32 gap-4">
+          <Loader2 size={32} className="text-[#E32326] animate-spin" />
+          <div className="text-[#8E8E8E] text-sm">Loading TikTok content...</div>
         </div>
-      )}
+      );
+    }
 
-      {/* Select all */}
-      {filtered.length > 0 && (
-        <div className="flex items-center gap-3">
-          <button onClick={handleSelectAll} className="flex items-center gap-2 text-[#8E8E8E] hover:text-[#f7f7f7] text-sm transition-colors">
-            {selected.size === filtered.length && filtered.length > 0 ? (
-              <CheckSquare size={15} className="text-[#E32326]" />
-            ) : (
-              <Square size={15} />
-            )}
-            {selected.size === filtered.length && filtered.length > 0 ? 'Deselect All' : 'Select All'}
+    // API error state
+    if (apiError) {
+      return (
+        <div className="flex flex-col items-center justify-center py-32 gap-4">
+          <AlertCircle size={36} className="text-[#F59E0B] opacity-70" />
+          <div className="text-[#f7f7f7] text-base font-medium">API server not running</div>
+          <div className="text-[#8E8E8E] text-sm text-center max-w-xs">
+            Start the API with <code className="bg-[#1C1C1C] px-1.5 py-0.5 rounded text-[#E32326] text-xs">node api/server.js</code> then refresh.
+          </div>
+          <button
+            onClick={loadContent}
+            className="flex items-center gap-2 px-4 py-2 bg-[#E32326] hover:bg-[#B91C1F] text-white text-sm font-medium rounded-lg transition-colors mt-2"
+          >
+            <RefreshCw size={14} /> Retry
           </button>
-          <span className="text-[#2A2A2A] text-xs">|</span>
-          <span className="text-[#8E8E8E] text-xs">{filtered.length} items shown</span>
         </div>
-      )}
+      );
+    }
 
-      {/* Grid */}
-      {filtered.length === 0 ? (
-        <div className="text-center py-20 text-[#8E8E8E]">
-          <Tag size={40} className="mx-auto mb-4 opacity-30" />
-          <div className="text-lg font-medium mb-1">No content found</div>
-          <div className="text-sm">Try adjusting your filters</div>
+    return (
+      <div className="space-y-5">
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-[#8E8E8E] text-sm">
+              {filtered.length} of {content.length} items
+              {content.length > 0 && <span className="text-[#E32326]"> · {content.length} real images</span>}
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            {selected.size > 0 && (
+              <>
+                <span className="text-[#8E8E8E] text-sm">{selected.size} selected</span>
+                <DownloadButton
+                  zipUrls={selectedDownloadUrls}
+                  zipFilename={`framecoach-tiktok-${selected.size}-images.zip`}
+                  label={`Download ${selected.size} Selected`}
+                  className="!bg-[#3B82F6]/15 !text-[#3B82F6] border border-[#3B82F6]/20 hover:!bg-[#3B82F6]/25"
+                />
+                <button
+                  onClick={handleBulkMarkPosted}
+                  className="px-4 py-2 bg-[#22C55E]/15 border border-[#22C55E]/20 text-[#22C55E] text-sm font-medium rounded-lg hover:bg-[#22C55E]/25 transition-colors"
+                >
+                  Mark Posted
+                </button>
+                <button onClick={() => setSelected(new Set())} className="text-[#8E8E8E] hover:text-[#f7f7f7]">
+                  <X size={16} />
+                </button>
+              </>
+            )}
+            <button
+              onClick={loadContent}
+              className="w-8 h-8 flex items-center justify-center text-[#8E8E8E] hover:text-[#f7f7f7] bg-[#1C1C1C] border border-[#2A2A2A] rounded-lg transition-colors"
+              title="Reload from API"
+            >
+              <RefreshCw size={14} />
+            </button>
+          </div>
         </div>
-      ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3">
-          {filtered.map(item => (
-            <ContentCard
-              key={item.id}
-              item={item}
-              selected={selected.has(item.id)}
-              onSelect={handleSelect}
-              onClick={setExpandedItem}
+
+        {/* Search + filter toggle */}
+        <div className="flex gap-3">
+          <div className="flex-1 relative">
+            <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8E8E8E]" />
+            <input
+              type="text"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              placeholder="Search headlines or captions..."
+              className="w-full pl-9 pr-4 py-2.5 bg-[#141414] border border-[#2A2A2A] rounded-lg text-[#f7f7f7] text-sm placeholder-[#8E8E8E]/50 focus:outline-none focus:border-[#E32326]/50"
             />
-          ))}
+          </div>
+          <button
+            onClick={() => setShowFilters(!showFilters)}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors ${
+              showFilters || activeFilters > 0
+                ? 'bg-[#E32326]/10 border-[#E32326]/30 text-[#E32326]'
+                : 'bg-[#141414] border-[#2A2A2A] text-[#8E8E8E] hover:text-[#f7f7f7]'
+            }`}
+          >
+            <Filter size={14} />
+            Filters
+            {activeFilters > 0 && (
+              <span className="w-5 h-5 flex items-center justify-center bg-[#E32326] text-white rounded-full text-xs">
+                {activeFilters}
+              </span>
+            )}
+          </button>
         </div>
-      )}
 
-      {/* Modal */}
-      {expandedItem && (
-        <ContentModal
-          item={expandedItem}
-          onClose={() => setExpandedItem(null)}
-          onUpdate={(id, updates) => {
-            handleUpdate(id, updates);
-            setExpandedItem(prev => ({ ...prev, ...updates }));
-          }}
-        />
-      )}
+        {/* Filter panel */}
+        {showFilters && (
+          <div className="bg-[#141414] border border-[#2A2A2A] rounded-xl p-4 space-y-4">
+            <div className="flex flex-wrap gap-6">
+              {/* Format */}
+              <div>
+                <div className="text-[#8E8E8E] text-xs uppercase tracking-wider mb-2">Format</div>
+                <div className="flex gap-1.5">
+                  {FORMAT_OPTIONS.map(f => (
+                    <button key={f} onClick={() => setFilterFormat(f)}
+                      className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                        filterFormat === f ? 'bg-[#E32326] text-white' : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
+                      }`}>
+                      {f}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Category */}
+              <div>
+                <div className="text-[#8E8E8E] text-xs uppercase tracking-wider mb-2">Category</div>
+                <div className="flex gap-1.5 flex-wrap">
+                  {CATEGORY_OPTIONS.map(c => (
+                    <button key={c} onClick={() => setFilterCategory(c)}
+                      className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                        filterCategory === c ? 'bg-[#E32326] text-white' : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
+                      }`}>
+                      {c}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Status */}
+              <div>
+                <div className="text-[#8E8E8E] text-xs uppercase tracking-wider mb-2">Status</div>
+                <div className="flex gap-1.5 flex-wrap">
+                  {STATUS_OPTIONS.map(s => (
+                    <button key={s} onClick={() => setFilterStatus(s)}
+                      className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                        filterStatus === s ? 'bg-[#E32326] text-white' : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
+                      }`}>
+                      {s}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Template */}
+              <div>
+                <div className="text-[#8E8E8E] text-xs uppercase tracking-wider mb-2">Template</div>
+                <div className="flex gap-1.5 flex-wrap">
+                  {TEMPLATE_OPTIONS.map(t => (
+                    <button key={t} onClick={() => setFilterTemplate(t)}
+                      className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                        filterTemplate === t ? 'bg-[#E32326] text-white' : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
+                      }`}>
+                      {t}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {activeFilters > 0 && (
+              <button
+                onClick={() => { setFilterFormat('All'); setFilterCategory('All'); setFilterStatus('All'); setFilterTemplate('All'); }}
+                className="text-[#E32326] text-xs hover:underline"
+              >
+                Clear all filters
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* Select all */}
+        {filtered.length > 0 && (
+          <div className="flex items-center gap-3">
+            <button onClick={handleSelectAll} className="flex items-center gap-2 text-[#8E8E8E] hover:text-[#f7f7f7] text-sm transition-colors">
+              {selected.size === filtered.length && filtered.length > 0 ? (
+                <CheckSquare size={15} className="text-[#E32326]" />
+              ) : (
+                <Square size={15} />
+              )}
+              {selected.size === filtered.length && filtered.length > 0 ? 'Deselect All' : 'Select All'}
+            </button>
+            <span className="text-[#2A2A2A] text-xs">|</span>
+            <span className="text-[#8E8E8E] text-xs">{filtered.length} items shown</span>
+          </div>
+        )}
+
+        {/* Grid */}
+        {filtered.length === 0 ? (
+          <div className="text-center py-20 text-[#8E8E8E]">
+            <Tag size={40} className="mx-auto mb-4 opacity-30" />
+            <div className="text-lg font-medium mb-1">No content found</div>
+            <div className="text-sm">Try adjusting your filters</div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3">
+            {filtered.map(item => (
+              <ContentCard
+                key={item.id}
+                item={item}
+                selected={selected.has(item.id)}
+                onSelect={handleSelect}
+                onClick={setExpandedItem}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Modal */}
+        {expandedItem && (
+          <ContentModal
+            item={expandedItem}
+            onClose={() => setExpandedItem(null)}
+            onUpdate={(id, updates) => {
+              handleUpdate(id, updates);
+              setExpandedItem(prev => ({ ...prev, ...updates }));
+            }}
+          />
+        )}
+      </div>
+    );
+  };
+
+  // -----------------------------------------------------------------------
+  // Render
+  // -----------------------------------------------------------------------
+
+  return (
+    <div className="space-y-5">
+      {/* Page header + tab bar */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h1 className="text-[#f7f7f7] text-2xl font-bold">Content Gallery</h1>
+          <p className="text-[#8E8E8E] text-sm mt-0.5">Browse and manage all generated content</p>
+        </div>
+        {tabBar}
+      </div>
+
+      {/* Tab content */}
+      {activeMainTab === 'instagram' ? renderInstagramTab() : renderTikTokTab()}
     </div>
   );
 }
