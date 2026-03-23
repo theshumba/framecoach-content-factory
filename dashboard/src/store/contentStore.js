@@ -6,9 +6,10 @@
  * Falls back to localStorage cache if the API is unavailable.
  */
 
-const API_BASE = 'http://localhost:3001';
-const STATUS_KEY = 'fc_status_overrides_v1';   // { [id]: { status, datePosted, platformUrl, notes } }
-const CACHE_KEY  = 'fc_manifest_cache_v1';      // full items array cached from last successful API fetch
+// Auto-detect: use API if running, otherwise load bundled manifest from public/
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const STATUS_KEY = 'fc_status_overrides_v1';
+const CACHE_KEY  = 'fc_manifest_cache_v1';
 const SETTINGS_KEY = 'fc_settings_v1';
 
 // ---------------------------------------------------------------------------
@@ -63,8 +64,8 @@ function normalizeItem(item) {
     caption: item.caption,
     hashtags: item.hashtags,
 
-    // Image
-    imageUrl: item.imageUrl ? `${API_BASE}${item.imageUrl}` : null,
+    // Image — works both with API server and standalone (bundled in public/output/)
+    imageUrl: item.imageUrl ? `${import.meta.env.BASE_URL || '/'}output${item.imageUrl}` : null,
     filename: item.filename,
 
     // Status (may be overridden from localStorage)
@@ -89,30 +90,34 @@ function normalizeItem(item) {
 // ---------------------------------------------------------------------------
 
 export async function loadManifest() {
-  try {
-    const resp = await fetch(`${API_BASE}/api/content/manifest`);
-    if (!resp.ok) throw new Error(`API returned ${resp.status}`);
-    const data = await resp.json();
-    const raw = data.items || [];
+  // Try API first, then bundled manifest, then localStorage cache
+  const base = import.meta.env.BASE_URL || '/';
+  const sources = [
+    () => fetch(`${API_BASE}/api/content/manifest`).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    () => fetch(`${base}content-manifest.json`).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+  ];
 
-    // Cache the raw manifest items
-    localStorage.setItem(CACHE_KEY, JSON.stringify(raw));
+  for (const source of sources) {
+    try {
+      const data = await source();
+      const raw = data.items || (Array.isArray(data) ? data : []);
+      if (raw.length === 0) continue;
 
-    // Merge overrides then normalize
-    return mergeWithOverrides(raw).map(normalizeItem);
-  } catch (err) {
-    console.warn('[contentStore] API unavailable, falling back to cache:', err.message);
-
-    // Try cache
-    const cached = localStorage.getItem(CACHE_KEY);
-    if (cached) {
-      const raw = JSON.parse(cached);
+      localStorage.setItem(CACHE_KEY, JSON.stringify(raw));
       return mergeWithOverrides(raw).map(normalizeItem);
+    } catch {
+      continue;
     }
-
-    // Nothing available
-    return [];
   }
+
+  // Fall back to localStorage cache
+  console.warn('[contentStore] No API or bundled manifest, using cache');
+  const cached = localStorage.getItem(CACHE_KEY);
+  if (cached) {
+    const raw = JSON.parse(cached);
+    return mergeWithOverrides(raw).map(normalizeItem);
+  }
+  return [];
 }
 
 // ---------------------------------------------------------------------------
@@ -334,4 +339,20 @@ export function exportToCSV() {
   a.download = `framecoach-content-${new Date().toISOString().split('T')[0]}.csv`;
   a.click();
   URL.revokeObjectURL(url);
+}
+
+// ─── Instagram Carousels ─────────────────────────────────────────────────
+let _instagramCarousels = null;
+
+export async function loadInstagramCarousels() {
+  if (_instagramCarousels) return _instagramCarousels;
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}instagram-carousels.json`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    _instagramCarousels = await res.json();
+    return _instagramCarousels;
+  } catch (err) {
+    console.error('Failed to load Instagram carousels:', err);
+    return [];
+  }
 }
