@@ -350,9 +350,79 @@ export async function loadInstagramCarousels() {
     const res = await fetch(`${import.meta.env.BASE_URL}instagram-carousels.json`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     _instagramCarousels = await res.json();
+    const igOverrides = JSON.parse(localStorage.getItem('fc_ig_carousel_status_v1') || '{}');
+    for (const c of _instagramCarousels) {
+      if (igOverrides[c.id]) {
+        Object.assign(c, igOverrides[c.id]);
+      }
+    }
     return _instagramCarousels;
   } catch (err) {
     console.error('Failed to load Instagram carousels:', err);
     return [];
   }
+}
+
+// ─── TikTok Content Groups ───────────────────────────────────────────────
+let _tiktokGroups = null;
+
+export async function loadTikTokGroups() {
+  if (_tiktokGroups) return _tiktokGroups;
+  const items = await loadManifest();
+
+  // Only keep carousel format (1080x1350)
+  const carouselItems = items.filter(item => item.format === 'Carousel');
+
+  // Group by headline (same content, different templates)
+  const groups = {};
+  for (const item of carouselItems) {
+    const key = item.headline;
+    if (!groups[key]) {
+      groups[key] = {
+        id: item.id.replace(/-[^-]+-carousel$/, ''),
+        name: item.headline.replace(/\n/g, ' '),
+        subtitle: item.category,
+        slides: [],
+        slideCount: 0,
+        caption: item.caption?.tiktok || item.caption?.instagram || '',
+        tiktokTitle: item.tiktokTitle || '',
+        tiktokDescription: item.tiktokDescription || '',
+        tiktokHashtags: item.tiktokHashtags || [],
+        templateNames: [],
+      };
+    }
+    groups[key].slides.push(item.imageUrl);
+    groups[key].templateNames.push(item.template);
+    groups[key].slideCount++;
+  }
+
+  _tiktokGroups = Object.values(groups);
+
+  // Load status overrides
+  const overrides = JSON.parse(localStorage.getItem('fc_tiktok_status_v1') || '{}');
+  for (const group of _tiktokGroups) {
+    if (overrides[group.id]) {
+      Object.assign(group, overrides[group.id]);
+    }
+  }
+
+  return _tiktokGroups;
+}
+
+export function updateTikTokGroup(id, updates) {
+  const overrides = JSON.parse(localStorage.getItem('fc_tiktok_status_v1') || '{}');
+  overrides[id] = { ...(overrides[id] || {}), ...updates };
+  localStorage.setItem('fc_tiktok_status_v1', JSON.stringify(overrides));
+}
+
+// ─── Instagram Carousel Status ───────────────────────────────────────────
+export function updateInstagramCarousel(id, updates) {
+  const overrides = JSON.parse(localStorage.getItem('fc_ig_carousel_status_v1') || '{}');
+  overrides[id] = { ...(overrides[id] || {}), ...updates };
+  localStorage.setItem('fc_ig_carousel_status_v1', JSON.stringify(overrides));
+}
+
+export function getInstagramCarouselStatus(id) {
+  const overrides = JSON.parse(localStorage.getItem('fc_ig_carousel_status_v1') || '{}');
+  return overrides[id] || {};
 }
