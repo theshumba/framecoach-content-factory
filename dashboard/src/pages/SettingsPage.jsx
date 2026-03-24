@@ -124,6 +124,45 @@ export default function SettingsPage() {
         </div>
       </SectionCard>
 
+      {/* TikTok API */}
+      <SectionCard title="TikTok API" icon={Key}>
+        <div className="space-y-5">
+          <div className="p-3 bg-[#3B82F6]/10 border border-[#3B82F6]/20 rounded-lg flex items-start gap-2">
+            <AlertCircle size={14} className="text-[#3B82F6] mt-0.5 shrink-0" />
+            <p className="text-[#3B82F6] text-xs leading-relaxed">
+              TikTok Content Posting API credentials. These are stored locally and never sent to any server.
+            </p>
+          </div>
+
+          <ApiKeyInput
+            label="TikTok Client Key"
+            platform="TikTok"
+            value={settings.tiktokClientKey || ''}
+            onChange={v => update('tiktokClientKey', v)}
+            connected={!!(settings.tiktokClientKey && settings.tiktokClientKey.length > 8)}
+          />
+
+          <ApiKeyInput
+            label="TikTok Client Secret"
+            platform="TikTok"
+            value={settings.tiktokClientSecret || ''}
+            onChange={v => update('tiktokClientSecret', v)}
+            connected={!!(settings.tiktokClientSecret && settings.tiktokClientSecret.length > 8)}
+          />
+
+          <button
+            disabled
+            className="flex items-center gap-2 px-4 py-2.5 bg-[#1C1C1C] border border-[#2A2A2A] text-[#8E8E8E] text-sm font-medium rounded-lg cursor-not-allowed opacity-60"
+          >
+            <Zap size={14} />
+            Connect TikTok
+          </button>
+          <p className="text-[#8E8E8E] text-xs -mt-2">
+            Coming soon — add your API keys to prepare.
+          </p>
+        </div>
+      </SectionCard>
+
       {/* Account Connections */}
       <SectionCard title="Platform Connections" icon={Link2}>
         <div className="space-y-3">

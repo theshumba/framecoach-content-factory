@@ -1,7 +1,7 @@
 import { Image } from 'lucide-react';
 
-export default function CarouselCard({ carousel, basePath, onClick }) {
-  const thumbUrl = `${basePath}${carousel.id}/${carousel.slides[0]}`;
+export default function CarouselCard({ carousel, basePath, thumbnailUrl, onClick }) {
+  const thumbUrl = thumbnailUrl || `${basePath}${carousel.id}/${carousel.slides[0]}`;
 
   return (
     <div
