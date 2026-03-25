@@ -363,50 +363,25 @@ export async function loadInstagramCarousels() {
   }
 }
 
-// ─── TikTok Content Groups ───────────────────────────────────────────────
-let _tiktokGroups = null;
+// ─── TikTok Content (same carousels, TikTok metadata) ──────────────────
+let _tiktokCarousels = null;
 
 export async function loadTikTokGroups() {
-  if (_tiktokGroups) return _tiktokGroups;
-  const items = await loadManifest();
-
-  // Only keep carousel format (1080x1350)
-  const carouselItems = items.filter(item => item.format === 'Carousel');
-
-  // Group by headline (same content, different templates)
-  const groups = {};
-  for (const item of carouselItems) {
-    const key = item.headline;
-    if (!groups[key]) {
-      groups[key] = {
-        id: item.id.replace(/-[^-]+-carousel$/, ''),
-        name: item.headline.replace(/\n/g, ' '),
-        subtitle: item.category,
-        slides: [],
-        slideCount: 0,
-        caption: item.caption?.tiktok || item.caption?.instagram || '',
-        tiktokTitle: item.tiktokTitle || '',
-        tiktokDescription: item.tiktokDescription || '',
-        tiktokHashtags: item.tiktokHashtags || [],
-        templateNames: [],
-      };
-    }
-    groups[key].slides.push(item.imageUrl);
-    groups[key].templateNames.push(item.template);
-    groups[key].slideCount++;
-  }
-
-  _tiktokGroups = Object.values(groups);
+  if (_tiktokCarousels) return _tiktokCarousels;
+  // Load from same source as Instagram carousels
+  const carousels = await loadInstagramCarousels();
+  // Filter to only carousels that have TikTok metadata
+  _tiktokCarousels = carousels.filter(c => c.tiktokCaption || c.tiktokDescription);
 
   // Load status overrides
   const overrides = JSON.parse(localStorage.getItem('fc_tiktok_status_v1') || '{}');
-  for (const group of _tiktokGroups) {
+  for (const group of _tiktokCarousels) {
     if (overrides[group.id]) {
       Object.assign(group, overrides[group.id]);
     }
   }
 
-  return _tiktokGroups;
+  return _tiktokCarousels;
 }
 
 export function updateTikTokGroup(id, updates) {

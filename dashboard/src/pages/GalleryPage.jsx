@@ -12,7 +12,7 @@ import CarouselViewer from '../components/CarouselViewer';
 // ---------------------------------------------------------------------------
 
 const IG_BASE_PATH = `${import.meta.env.BASE_URL}instagram-carousels/`;
-const TIKTOK_CATEGORIES = ['All', 'App Promo', 'Brand Awareness', 'Film Education'];
+const CATEGORIES = ['All', 'App Promotion', 'Filmmaker Education', 'Social Proof', 'Our Beliefs', 'Brand', 'Our Story'];
 
 // ---------------------------------------------------------------------------
 // GalleryPage
@@ -43,6 +43,7 @@ export default function GalleryPage() {
   const [carouselsLoading, setCarouselsLoading] = useState(false);
   const [carouselsLoaded, setCarouselsLoaded] = useState(false);
   const [igSearch, setIgSearch] = useState('');
+  const [igCategory, setIgCategory] = useState('All');
   const [viewerCarousel, setViewerCarousel] = useState(null);
 
   const loadCarousels = useCallback(async () => {
@@ -65,13 +66,15 @@ export default function GalleryPage() {
   }, [activeMainTab, carouselsLoaded, loadCarousels]);
 
   const filteredCarousels = useMemo(() => {
-    if (!igSearch) return carousels;
-    const q = igSearch.toLowerCase();
-    return carousels.filter(c =>
-      c.name?.toLowerCase().includes(q) ||
-      c.subtitle?.toLowerCase().includes(q)
-    );
-  }, [carousels, igSearch]);
+    return carousels.filter(c => {
+      if (igCategory !== 'All' && c.subtitle !== igCategory) return false;
+      if (igSearch) {
+        const q = igSearch.toLowerCase();
+        if (!c.name?.toLowerCase().includes(q) && !c.subtitle?.toLowerCase().includes(q)) return false;
+      }
+      return true;
+    });
+  }, [carousels, igSearch, igCategory]);
 
   const handleIgSave = useCallback((id, updates) => {
     updateInstagramCarousel(id, updates);
@@ -175,17 +178,41 @@ export default function GalleryPage() {
 
     return (
       <div className="space-y-5">
-        {/* Search */}
-        <div className="relative">
-          <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8E8E8E]" />
-          <input
-            type="text"
-            value={igSearch}
-            onChange={e => setIgSearch(e.target.value)}
-            placeholder="Search carousels by name or subtitle..."
-            className="w-full pl-9 pr-4 py-2.5 bg-[#141414] border border-[#2A2A2A] rounded-lg text-[#f7f7f7] text-sm placeholder-[#8E8E8E]/50 focus:outline-none focus:border-[#E32326]/50"
-          />
+        {/* Search + Category filters */}
+        <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex-1 relative">
+            <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8E8E8E]" />
+            <input
+              type="text"
+              value={igSearch}
+              onChange={e => setIgSearch(e.target.value)}
+              placeholder="Search carousels by name or category..."
+              className="w-full pl-9 pr-4 py-2.5 bg-[#141414] border border-[#2A2A2A] rounded-lg text-[#f7f7f7] text-sm placeholder-[#8E8E8E]/50 focus:outline-none focus:border-[#E32326]/50"
+            />
+          </div>
         </div>
+
+        {/* Category filter buttons */}
+        <div className="flex gap-1.5 flex-wrap">
+          {CATEGORIES.map(cat => (
+            <button
+              key={cat}
+              onClick={() => setIgCategory(cat)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                igCategory === cat
+                  ? 'bg-[#E32326] text-white'
+                  : 'bg-[#1C1C1C] text-[#8E8E8E] hover:text-[#f7f7f7]'
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Count */}
+        <p className="text-[#8E8E8E] text-sm">
+          {filteredCarousels.length} of {carousels.length} carousels
+        </p>
 
         {/* Grid or empty state */}
         {filteredCarousels.length === 0 ? (
@@ -193,7 +220,7 @@ export default function GalleryPage() {
             <Tag size={40} className="mx-auto mb-4 opacity-30" />
             <div className="text-lg font-medium mb-1">No carousels found</div>
             <div className="text-sm">
-              {igSearch ? 'Try adjusting your search' : 'No carousel data available'}
+              {igSearch || igCategory !== 'All' ? 'Try adjusting your search or filters' : 'No carousel data available'}
             </div>
           </div>
         ) : (
@@ -209,13 +236,14 @@ export default function GalleryPage() {
           </div>
         )}
 
-        {/* Carousel Viewer Modal */}
+        {/* Carousel Viewer Modal — Instagram mode */}
         {viewerCarousel && (
           <CarouselViewer
             carousel={viewerCarousel}
             basePath={IG_BASE_PATH}
             onClose={() => setViewerCarousel(null)}
             onSave={handleIgSave}
+            mode="instagram"
           />
         )}
       </div>
@@ -264,7 +292,7 @@ export default function GalleryPage() {
               type="text"
               value={tkSearch}
               onChange={e => setTkSearch(e.target.value)}
-              placeholder="Search by headline or category..."
+              placeholder="Search by name or category..."
               className="w-full pl-9 pr-4 py-2.5 bg-[#141414] border border-[#2A2A2A] rounded-lg text-[#f7f7f7] text-sm placeholder-[#8E8E8E]/50 focus:outline-none focus:border-[#E32326]/50"
             />
           </div>
@@ -279,7 +307,7 @@ export default function GalleryPage() {
 
         {/* Category filter buttons */}
         <div className="flex gap-1.5 flex-wrap">
-          {TIKTOK_CATEGORIES.map(cat => (
+          {CATEGORIES.map(cat => (
             <button
               key={cat}
               onClick={() => setTkCategory(cat)}
@@ -296,7 +324,7 @@ export default function GalleryPage() {
 
         {/* Count */}
         <p className="text-[#8E8E8E] text-sm">
-          {filteredTiktok.length} of {tiktokGroups.length} groups
+          {filteredTiktok.length} of {tiktokGroups.length} content pieces
         </p>
 
         {/* Grid or empty state */}
@@ -314,20 +342,21 @@ export default function GalleryPage() {
               <CarouselCard
                 key={group.id}
                 carousel={group}
-                thumbnailUrl={group.slides[0]}
+                basePath={IG_BASE_PATH}
                 onClick={setTkViewer}
               />
             ))}
           </div>
         )}
 
-        {/* TikTok Carousel Viewer Modal */}
+        {/* TikTok Carousel Viewer Modal — TikTok mode */}
         {tkViewer && (
           <CarouselViewer
             carousel={tkViewer}
-            basePath={null}
+            basePath={IG_BASE_PATH}
             onClose={() => setTkViewer(null)}
             onSave={handleTkSave}
+            mode="tiktok"
           />
         )}
       </div>

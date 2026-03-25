@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight, Copy, Check, Save } from 'lucide-react';
 import DownloadButton from './DownloadButton';
 
-export default function CarouselViewer({ carousel, basePath, onClose, onSave }) {
+export default function CarouselViewer({ carousel, basePath, onClose, onSave, mode = 'instagram' }) {
   const [current, setCurrent] = useState(0);
   const [copiedField, setCopiedField] = useState(null);
 
@@ -46,18 +46,10 @@ export default function CarouselViewer({ carousel, basePath, onClose, onSave }) 
     setTimeout(() => setSaved(false), 2000);
   }
 
-  // Build "Copy All" text for TikTok
-  const tiktokCopyAll = [
-    carousel.tiktokTitle,
-    carousel.tiktokDescription,
-    Array.isArray(carousel.tiktokHashtags) ? carousel.tiktokHashtags.join(' ') : carousel.tiktokHashtags,
-  ].filter(Boolean).join('\n\n');
-
-  // Check if caption contains hashtags
-  const captionHasHashtags = carousel.caption && /#\w+/.test(carousel.caption);
-  const captionHashtagsPart = captionHasHashtags
-    ? carousel.caption.match(/((?:#\w+\s*)+)$/)?.[1]?.trim() || ''
-    : '';
+  // Build hashtag string for TikTok
+  const tiktokHashtagsStr = Array.isArray(carousel.tiktokHashtags)
+    ? carousel.tiktokHashtags.join(' ')
+    : carousel.tiktokHashtags || '';
 
   return (
     <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" onClick={stableClose}>
@@ -122,114 +114,99 @@ export default function CarouselViewer({ carousel, basePath, onClose, onSave }) 
             />
           </div>
 
-          {/* ─── TikTok Metadata ─────────────────────────────────────── */}
-          {carousel.tiktokTitle && (
+          {/* ─── TikTok Mode: Separate Copy Buttons ───────────────────── */}
+          {mode === 'tiktok' && (
             <div className="mt-5 space-y-3">
               <div className="border-t border-zinc-800 pt-4">
-                <span className="text-[#8E8E8E] text-[10px] font-semibold uppercase tracking-wider">TikTok Metadata</span>
+                <span className="text-[#8E8E8E] text-[10px] font-semibold uppercase tracking-wider">TikTok Copy</span>
               </div>
 
-              {/* Title */}
-              <div className="rounded-lg bg-[#1C1C1C] p-3">
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[#8E8E8E] text-xs font-semibold uppercase tracking-wider">Title</span>
-                  <CopyBtn
-                    text={carousel.tiktokTitle}
-                    field="tiktokTitle"
-                    copiedField={copiedField}
-                    onCopy={copyToClipboard}
-                  />
+              {/* Caption (<90 chars) */}
+              {carousel.tiktokCaption && (
+                <div className="rounded-lg bg-[#1C1C1C] p-3">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[#8E8E8E] text-xs font-semibold uppercase tracking-wider">Caption</span>
+                    <span className="text-zinc-600 text-[10px]">{carousel.tiktokCaption.length} chars</span>
+                  </div>
+                  <p className="text-[#f7f7f7] text-sm leading-relaxed">{carousel.tiktokCaption}</p>
+                  <button
+                    onClick={() => copyToClipboard(carousel.tiktokCaption, 'tkCaption')}
+                    className="mt-2 w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-medium transition-colors"
+                  >
+                    {copiedField === 'tkCaption' ? (
+                      <><Check size={12} className="text-green-500" /> Copied Caption</>
+                    ) : (
+                      <><Copy size={12} /> Copy Caption</>
+                    )}
+                  </button>
                 </div>
-                <p className="text-[#f7f7f7] text-sm leading-relaxed">{carousel.tiktokTitle}</p>
-              </div>
+              )}
 
-              {/* Description */}
+              {/* Description (long, up to 4000 chars) */}
               {carousel.tiktokDescription && (
                 <div className="rounded-lg bg-[#1C1C1C] p-3">
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-[#8E8E8E] text-xs font-semibold uppercase tracking-wider">Description</span>
-                    <CopyBtn
-                      text={carousel.tiktokDescription}
-                      field="tiktokDesc"
-                      copiedField={copiedField}
-                      onCopy={copyToClipboard}
-                    />
+                    <span className="text-zinc-600 text-[10px]">{carousel.tiktokDescription.length} chars</span>
                   </div>
-                  <p className="text-[#f7f7f7] text-sm leading-relaxed">{carousel.tiktokDescription}</p>
+                  <p className="text-[#f7f7f7] text-sm leading-relaxed max-h-40 overflow-y-auto">{carousel.tiktokDescription}</p>
+                  <button
+                    onClick={() => copyToClipboard(carousel.tiktokDescription, 'tkDesc')}
+                    className="mt-2 w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-medium transition-colors"
+                  >
+                    {copiedField === 'tkDesc' ? (
+                      <><Check size={12} className="text-green-500" /> Copied Description</>
+                    ) : (
+                      <><Copy size={12} /> Copy Description</>
+                    )}
+                  </button>
                 </div>
               )}
 
               {/* Hashtags */}
-              {carousel.tiktokHashtags && carousel.tiktokHashtags.length > 0 && (
+              {tiktokHashtagsStr && (
                 <div className="rounded-lg bg-[#1C1C1C] p-3">
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-[#8E8E8E] text-xs font-semibold uppercase tracking-wider">Hashtags</span>
-                    <CopyBtn
-                      text={Array.isArray(carousel.tiktokHashtags) ? carousel.tiktokHashtags.join(' ') : carousel.tiktokHashtags}
-                      field="tiktokHash"
-                      copiedField={copiedField}
-                      onCopy={copyToClipboard}
-                    />
                   </div>
-                  <p className="text-[#E32326] text-sm leading-relaxed">
-                    {Array.isArray(carousel.tiktokHashtags) ? carousel.tiktokHashtags.join(' ') : carousel.tiktokHashtags}
-                  </p>
+                  <p className="text-[#E32326] text-sm leading-relaxed">{tiktokHashtagsStr}</p>
+                  <button
+                    onClick={() => copyToClipboard(tiktokHashtagsStr, 'tkHash')}
+                    className="mt-2 w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-medium transition-colors"
+                  >
+                    {copiedField === 'tkHash' ? (
+                      <><Check size={12} className="text-green-500" /> Copied Hashtags</>
+                    ) : (
+                      <><Copy size={12} /> Copy Hashtags</>
+                    )}
+                  </button>
                 </div>
               )}
-
-              {/* Copy All */}
-              <button
-                onClick={() => copyToClipboard(tiktokCopyAll, 'tiktokAll')}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#E32326] hover:bg-[#c91f22] text-white text-sm font-semibold transition-colors"
-              >
-                {copiedField === 'tiktokAll' ? (
-                  <>
-                    <Check size={14} className="text-white" />
-                    Copied All
-                  </>
-                ) : (
-                  <>
-                    <Copy size={14} />
-                    Copy All TikTok Metadata
-                  </>
-                )}
-              </button>
             </div>
           )}
 
-          {/* ─── Caption ─────────────────────────────────────────────── */}
-          {carousel.caption && (
+          {/* ─── Instagram Mode: Single Caption + Hashtags Copy ────────── */}
+          {mode === 'instagram' && carousel.caption && (
             <div className="mt-5">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-zinc-400 text-xs font-semibold uppercase tracking-wider">Caption</span>
-                <CopyBtn
-                  text={carousel.caption}
-                  field="caption"
-                  copiedField={copiedField}
-                  onCopy={copyToClipboard}
-                />
+              <div className="border-t border-zinc-800 pt-4 mb-3">
+                <span className="text-[#8E8E8E] text-[10px] font-semibold uppercase tracking-wider">Instagram Copy</span>
               </div>
-              <p className="text-zinc-300 text-sm leading-relaxed whitespace-pre-wrap">{carousel.caption}</p>
-
-              {/* Copy Caption + Hashtags (only if caption has hashtags) */}
-              {captionHasHashtags && captionHashtagsPart && (
+              <div className="rounded-lg bg-[#1C1C1C] p-3">
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="text-[#8E8E8E] text-xs font-semibold uppercase tracking-wider">Caption + Hashtags</span>
+                </div>
+                <p className="text-zinc-300 text-sm leading-relaxed whitespace-pre-wrap max-h-48 overflow-y-auto">{carousel.caption}</p>
                 <button
-                  onClick={() => copyToClipboard(carousel.caption, 'captionHash')}
-                  className="mt-2 w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-medium transition-colors"
+                  onClick={() => copyToClipboard(carousel.caption, 'igCaption')}
+                  className="mt-2 w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-[#E32326] hover:bg-[#c91f22] text-white text-sm font-semibold transition-colors"
                 >
-                  {copiedField === 'captionHash' ? (
-                    <>
-                      <Check size={12} className="text-green-500" />
-                      Copied Caption + Hashtags
-                    </>
+                  {copiedField === 'igCaption' ? (
+                    <><Check size={14} className="text-white" /> Copied Caption + Hashtags</>
                   ) : (
-                    <>
-                      <Copy size={12} />
-                      Copy Caption + Hashtags
-                    </>
+                    <><Copy size={14} /> Copy Caption + Hashtags</>
                   )}
                 </button>
-              )}
+              </div>
             </div>
           )}
 
@@ -282,15 +259,9 @@ export default function CarouselViewer({ carousel, basePath, onClose, onSave }) 
                 className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#E32326] hover:bg-[#c91f22] text-white text-sm font-semibold transition-colors"
               >
                 {saved ? (
-                  <>
-                    <Check size={14} />
-                    Saved
-                  </>
+                  <><Check size={14} /> Saved</>
                 ) : (
-                  <>
-                    <Save size={14} />
-                    Save Changes
-                  </>
+                  <><Save size={14} /> Save Changes</>
                 )}
               </button>
             </div>
@@ -298,20 +269,5 @@ export default function CarouselViewer({ carousel, basePath, onClose, onSave }) 
         </div>
       </div>
     </div>
-  );
-}
-
-/* ─── Tiny copy button sub-component ─────────────────────────────────── */
-
-function CopyBtn({ text, field, copiedField, onCopy }) {
-  const isCopied = copiedField === field;
-  return (
-    <button
-      onClick={() => onCopy(text, field)}
-      className="flex items-center gap-1 text-xs text-zinc-500 hover:text-white transition-colors"
-    >
-      {isCopied ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
-      {isCopied ? 'Copied' : 'Copy'}
-    </button>
   );
 }
