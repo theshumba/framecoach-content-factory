@@ -2,472 +2,331 @@
   {
     "id": "01-what-is-framecoach",
     "name": "What Is FrameCoach",
-    "subtitle": "Filmmaker Education App",
-    "caption": "Your filmmaking coach, in your pocket. Learn cinematography, composition & storytelling — one bite-sized lesson at a time. Link in bio. #filmmaking #cinematography #filmmaker #filmschool #contentcreator",
+    "subtitle": "App Promotion",
+    "caption": "FrameCoach is an AI cinematography coach that connects to your camera, reads your scene, and tells you exactly what settings to use — and why. Describe your creative vision. Get real-time, actionable recommendations. One tap to apply them straight to your camera. The decision layer for your camera. Link in bio.\n\n#filmmaking #cinematography #filmmaker #indiefilm #cameracoach #exposuretips #framecoach #filmmakingtools #filmtips #directorofphotography",
+    "tiktokCaption": "Your AI cinematography coach. Reads the scene. Coaches the shot.",
+    "tiktokDescription": "FrameCoach is an AI-powered cinematography coaching app built for indie filmmakers, solo shooters, and content creators who need confident camera decisions on set — without a full crew backing them up.\n\nHere's how it works: you connect your camera (Sony, Canon) to FrameCoach via WiFi. The app pulls a live view from your camera and displays it in real time. You describe your creative intent in plain English — something like 'protect highlights', 'warm mood', or 'shallow depth of field'.\n\nFrameCoach then captures a frame from your camera, runs it through a hybrid analysis pipeline that combines deterministic exposure math with AI coaching and multimodal composition analysis. The result? 0-3 prioritised, actionable recommendations that tell you exactly what to change — ISO, aperture, shutter speed, white balance — and more importantly, WHY.\n\nThe math engine is the brain. It calculates stops-based adjustments grounded in real physics and your camera's actual hardware limits. The AI is the voice — it translates those calculations into filmmaker-friendly language so you understand the reasoning behind every recommendation.\n\nAnd here's the best part: you can auto-apply any recommendation back to your camera with a single tap. No manual dial turning. No second-guessing. Just describe what you want, and FrameCoach handles the technical execution.\n\nIt also analyses your composition in real time — rule of thirds, subject placement, leading lines, visual balance, depth, and framing. So you're not just getting exposure coaching, you're getting a full cinematographic assessment of every shot.\n\nFrameCoach was built by filmmakers who got tired of the gap between knowing what a great shot looks like and knowing how to technically achieve it. The app bridges that gap — so you can focus on storytelling while FrameCoach handles the science.\n\nThe decision layer for your camera. Try it at framecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#cinematography", "#filmmaker", "#indiefilm", "#cameracoach", "#framecoach", "#exposuretips", "#filmtips", "#AIfilmmaking", "#camerasettings", "#directorofphotography", "#filmmakersoftiktok", "#indiefilmmaker", "#solofilmmaker", "#filmmakingtips"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "02-5-reasons-to-try",
-    "name": "5 Reasons to Try FrameCoach",
+    "name": "5 Reasons to Use FrameCoach",
     "subtitle": "App Promotion",
-    "caption": "5 reasons filmmakers are switching to FrameCoach. Which one resonates? Drop a number below ⬇️ #filmmaking #filmmaker #learnfilm",
+    "caption": "5 reasons indie filmmakers are using FrameCoach on set:\n\n1. Real-time exposure coaching — not a calculator, a coach\n2. Plain-English recommendations you actually understand\n3. One-tap auto-apply straight to your camera\n4. Composition analysis that reads your frame\n5. Scene-aware intelligence that adapts to your environment\n\nWhich one matters most to you? Drop a number below.\n\n#filmmaking #filmmaker #cinematography #indiefilm #cameracoach #framecoach #filmmakingtools #filmtips #directorofphotography #exposuretips",
+    "tiktokCaption": "5 reasons filmmakers are using FrameCoach on every shoot.",
+    "tiktokDescription": "If you're an indie filmmaker, solo shooter, or content creator who's ever second-guessed your camera settings on set, FrameCoach was built for you. Here are five reasons filmmakers are bringing it to every shoot.\n\nReason 1: Real-time exposure coaching. FrameCoach doesn't just tell you numbers — it coaches you through the decision. It captures a frame from your connected camera, runs it through a deterministic math engine that calculates exactly what needs to change (ISO, aperture, shutter speed, white balance) and by how much. Then the AI translates that into plain English so you understand the WHY behind every recommendation.\n\nReason 2: You describe your vision, it handles the math. Instead of fumbling with settings, you just type what you want: 'protect the highlights', 'warm mood', 'shallow depth of field'. FrameCoach interprets your creative intent and maps it to precise exposure adjustments. The math engine uses stops-based arithmetic — the same calculations a light meter uses — but wrapped in language you can actually learn from.\n\nReason 3: One-tap auto-apply. Every recommendation comes with an Apply button. Tap it, and the setting is sent directly to your camera via WiFi. No dial turning. No menu diving. FrameCoach even verifies the change took effect. You can apply individual settings or hit Apply All to execute every recommendation sequentially.\n\nReason 4: Composition analysis that reads your frame. FrameCoach doesn't stop at exposure. A parallel AI vision system analyses your composition — rule of thirds placement, subject positioning, visual balance, leading lines, depth separation, and natural framing. You get 1-3 specific, actionable composition tips alongside your exposure coaching.\n\nReason 5: Scene-aware intelligence. FrameCoach runs on-device scene classification using Apple's Vision framework before your frame even leaves your phone. It detects people in the frame, estimates subject distance, identifies lighting conditions (natural, artificial, mixed, backlit, low-light), and classifies the scene type. All of this context feeds into smarter, more relevant recommendations. If there's a person in your shot, skin tone exposure gets prioritised. If the sky is blown out but the face is correctly exposed, it knows that's acceptable.\n\nThis isn't a reference app or a settings calculator. It's an AI cinematography coach that learns your scene, understands your intent, and guides you to the technically perfect execution of your creative vision.\n\nTry it at framecoach.io — the decision layer for your camera.",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#filmmakingtools", "#filmtips", "#camerasettings", "#exposuretips", "#AIfilmmaking", "#filmmakersoftiktok", "#indiefilmmaker", "#solofilmmaker", "#filmset"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "03-framecoach-vs-youtube",
-    "name": "FrameCoach vs YouTube",
+    "name": "FrameCoach vs Trial and Error",
     "subtitle": "App Promotion",
-    "caption": "FrameCoach vs YouTube tutorials — structured learning wins every time. Stop scrolling, start growing. Link in bio. #filmmaking #filmmaker #videography",
+    "caption": "Trial and error: shoot, check, adjust, reshoot, repeat. FrameCoach: describe your vision, get coached, nail it. Real-time analysis of your actual scene. Recommendations grounded in physics, not opinions. One tap to apply. Stop guessing on set.\n\n#filmmaking #filmmaker #cinematography #indiefilm #cameracoach #framecoach #filmtips #exposuretips #camerasettings #filmmakingtools",
+    "tiktokCaption": "Trial and error vs FrameCoach. One wastes time, one nails it.",
+    "tiktokDescription": "Most filmmakers learn camera settings the hard way — trial and error. You take a shot, check the monitor, adjust something, shoot again, check again. On a good day you get there eventually. On a bad day you're burning through golden hour trying to figure out why your highlights keep clipping.\n\nFrameCoach replaces that entire cycle with a single interaction. You connect your camera. You describe what you want — 'protect highlights', 'warm mood', 'cinematic shallow DoF'. FrameCoach captures a frame, analyses your actual scene through a multi-stage pipeline, and coaches you through the exact settings changes you need to make.\n\nThe key difference is that FrameCoach's recommendations are grounded in deterministic exposure math — stops-based calculations that mirror what a light meter does internally. When it says 'lower ISO from 800 to 200', that's not a guess. It's calculated from your measured highlight clipping percentage against your goal tolerance bands.\n\nThe system builds a 256-bin luminance histogram of your captured frame, maps it to the Ansel Adams 11-zone system, detects highlight and shadow clipping at the sub-pixel level, analyses skin tones in YCbCr colour space, and estimates your camera's dynamic range utilisation at your current ISO. All of this feeds into a deterministic action planner that calculates exactly how many stops of adjustment you need and distributes them across your settings in priority order.\n\nThen the AI coaching layer translates all of that math into plain English. Not just 'lower your ISO' but 'lowering ISO reduces noise in your shadow detail' — so you actually learn the reasoning and become a better filmmaker over time.\n\nAnd if you like the recommendation? One tap. Applied directly to your camera. Verified.\n\nTrial and error has its place. But when you're on set with limited time and no room for reshoots, you want physics on your side.\n\nFrameCoach — the decision layer for your camera. framecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#filmtips", "#camerasettings", "#exposuretips", "#AIfilmmaking", "#filmmakersoftiktok", "#indiefilmmaker", "#solofilmmaker", "#filmmakingtips", "#goldenhour"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "04-your-first-week",
-    "name": "Your First Week",
+    "name": "Your First Shoot With FrameCoach",
     "subtitle": "App Promotion",
-    "caption": "Here's what your first week with FrameCoach looks like. Day 1 to Day 7 — real progress, real fast. #filmmaking #filmmaker #cinematography",
+    "caption": "Your first shoot with FrameCoach:\n\nStep 1 — Connect your camera via WiFi\nStep 2 — See your live view on screen\nStep 3 — Describe your creative intent\nStep 4 — Get real-time coaching\nStep 5 — One tap to apply settings\nStep 6 — Nail the shot. Every time.\n\nThe decision layer for your camera.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #filmtips #camerasettings #exposuretips #filmmakingtools",
+    "tiktokCaption": "Your first shoot with FrameCoach. Six steps to perfect settings.",
+    "tiktokDescription": "Here's exactly what happens the first time you use FrameCoach on a shoot.\n\nStep 1: Connect your camera. You add your camera's WiFi profile — scan the QR code or enter the SSID manually. FrameCoach supports Sony and Canon cameras. Once connected, it maintains a dual-pipe architecture: WiFi for camera communication, cellular for AI processing. Both run simultaneously so you never lose either connection.\n\nStep 2: Live view streaming. FrameCoach pulls a live view from your camera and displays it in a floating 16:9 preview at the top of the interface. You can see exactly what your camera sees, updated in real time.\n\nStep 3: Describe your creative intent. This is where FrameCoach diverges from every other camera app. You don't tap buttons or scroll through menus. You type what you want in plain English: 'protect highlights in this sunset', 'warm mood with shallow depth of field', 'ensure proper exposure for the skin tones'. The app understands creative intent, not just technical parameters.\n\nStep 4: Real-time coaching. FrameCoach captures a frame from your camera and runs it through its analysis pipeline. On-device scene classification identifies people, estimates lighting conditions, and classifies the environment. The edge function builds histograms, maps to the zone system, detects clipping, analyses skin tones, and estimates dynamic range utilisation. The deterministic math engine calculates the exact stops-based adjustments needed. The AI coaching layer translates it all into filmmaker-friendly language.\n\nStep 5: One tap to apply. Each recommendation comes with an Apply button. Tap it and the setting is sent directly to your camera. FrameCoach verifies the change took effect. You can also hit Apply All to execute every recommendation in sequence.\n\nStep 6: Nail the shot. With exposure dialled in and composition feedback in hand, you shoot with confidence. No guessing. No chimping. No wasted time.\n\nThe entire process — from describing your vision to having settings applied — takes seconds. It's like having an experienced DP whispering in your ear on every shot.\n\nFrameCoach — the decision layer for your camera. Try it at framecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#filmtips", "#camerasettings", "#solofilmmaker", "#AIfilmmaking", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#cameragear", "#filmset"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "05-free-toolkit",
-    "name": "Free Toolkit",
-    "subtitle": "App Promotion",
-    "caption": "Every tool you need to grow as a filmmaker — and it won't cost you a thing. Tap the link. #filmmaking #filmmaker #filmtools",
+    "name": "The Decision Layer for Your Camera",
+    "subtitle": "Brand",
+    "caption": "FrameCoach isn't a calculator. It isn't a reference card. It's the decision layer for your camera. You describe your creative vision. FrameCoach reads the scene, coaches the exposure, analyses the composition, and applies the settings — all in real time. Because the gap between seeing a great shot and technically nailing it shouldn't exist.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #exposuretips #camerasettings #filmmakingtools #directorofphotography",
+    "tiktokCaption": "Not a calculator. Not a reference card. The decision layer for your camera.",
+    "tiktokDescription": "There are plenty of camera apps that give you numbers. Depth of field calculators. Exposure meters. Shutter angle converters. They're reference tools — you input values, you get values back.\n\nFrameCoach is fundamentally different. It's a coaching system that sits between your creative intent and your camera's technical execution.\n\nHere's the distinction: a calculator tells you what f/2.8 at ISO 400 gives you mathematically. FrameCoach looks at your actual scene — the highlights clipping in the sky, the shadow detail you're losing in the foreground, the person standing in mixed lighting — and tells you 'lower your ISO from 800 to 200 because you have 2 stops of headroom and your highlights are clipping at 12% against a 3% tolerance for your protect-highlights goal.' Then it explains WHY in plain English so you learn the principle, not just the number.\n\nThe deterministic math engine is the brain of the system. It builds luminance histograms, maps them to the Ansel Adams zone system, detects clipping at sub-pixel precision, analyses skin tones using YCbCr colour space, estimates your camera's dynamic range at your current ISO, and calculates stops-based adjustments clamped to your camera's actual hardware limits. Every recommendation is grounded in physics.\n\nThe AI coaching layer is the voice. It takes the math engine's output and communicates it in language filmmakers actually understand. Not 'adjust EV by -2.0' but 'your highlights are blowing out in the sky — lowering ISO will bring them back without affecting your depth of field.'\n\nAnd then there's composition analysis running in parallel — a multimodal vision system that reads rule of thirds placement, subject positioning, leading lines, visual balance, and depth in your frame.\n\nAll of this happens in seconds. Describe your vision, get coached, apply with one tap.\n\nThat's the decision layer. framecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#camerasettings", "#exposuretips", "#AIfilmmaking", "#filmmakersoftiktok", "#directorofphotography", "#filmmakingtools", "#indiefilmmaker", "#filmmakingtips", "#cameragear"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "06-stop-learning-the-hard-way",
-    "name": "Stop Learning the Hard Way",
+    "name": "Stop Guessing Your Settings",
     "subtitle": "App Promotion",
-    "caption": "Most filmmakers learn through years of trial and error. There's a faster way. #filmmaking #filmmaker #filmtips",
+    "caption": "You shouldn't have to guess your camera settings on set. FrameCoach captures a frame from your camera, analyses the exposure in real time, and coaches you through the exact adjustments — ISO, aperture, shutter speed, white balance. Every recommendation grounded in physics. Every explanation in plain English. Stop guessing. Start knowing.\n\n#filmmaking #filmmaker #cinematography #camerasettings #cameracoach #framecoach #indiefilm #filmtips #exposuretips #filmmakingtools",
+    "tiktokCaption": "Stop guessing your camera settings. FrameCoach knows the math.",
+    "tiktokDescription": "Every filmmaker has been there. You're on set, the light is changing, and you're not sure if your ISO is too high or your aperture is too wide. You take a shot, check the monitor, make an adjustment, shoot again. Sometimes you get it right. Sometimes you don't realise you were wrong until you're in post and the highlights are blown.\n\nFrameCoach eliminates the guesswork entirely. Here's how.\n\nWhen you capture a frame through FrameCoach, the app runs it through a five-stage exposure analysis pipeline. Stage one: it builds 256-bin histograms for red, green, blue, and luminance channels using the BT.709 standard. Stage two: it maps the luminance histogram to the Ansel Adams 11-zone system, identifying where your image falls from pure black (Zone 0) to pure white (Zone 10), detecting bimodal and skewed distributions. Stage three: it detects highlight clipping (luminance 253-255) and shadow crushing (luminance 0-2) with severity ratings. Stage four: it analyses skin tones by converting to YCbCr colour space with two detection ranges for skin tone diversity. Stage five: it estimates your camera's dynamic range utilisation at your current ISO.\n\nAll of that feeds into the deterministic math engine — a stops-based action planner that calculates exactly what needs to change. ISO adjustments are prioritised first (safest, no creative side effects), then aperture, then shutter speed. Unless your goal involves depth of field or motion — then the priority order shifts to protect the creative variable.\n\nThe result: 0-3 prioritised recommendations, each with a current value, suggested value, and plain-English reasoning. And a one-tap Apply button to send it directly to your camera.\n\nNo guessing. No trial and error. Just physics-grounded coaching that helps you nail every shot and understand why.\n\nframecoach.io — the decision layer for your camera.",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#camerasettings", "#cameracoach", "#framecoach", "#filmtips", "#exposuretips", "#AIfilmmaking", "#filmmakersoftiktok", "#indiefilmmaker", "#solofilmmaker", "#filmmakingtips", "#filmmakingtools"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "07-five-minutes-a-day",
-    "name": "Five Minutes a Day",
+    "name": "One Tap, Perfect Settings",
     "subtitle": "App Promotion",
-    "caption": "5 minutes a day is all it takes to become a better filmmaker. Here's how. #filmmaking #filmmaker #dailypractice",
+    "caption": "One tap. That's all it takes to apply FrameCoach's recommendations directly to your camera. No dial turning. No menu diving. Describe your vision, get coached, tap Apply. Settings sent to your camera via WiFi. Verified automatically. The fastest path from creative intent to technical execution.\n\n#filmmaking #filmmaker #cinematography #camerasettings #cameracoach #framecoach #indiefilm #filmtips #autoapply #filmmakingtools",
+    "tiktokCaption": "One tap. Settings applied to your camera. No dials. No menus.",
+    "tiktokDescription": "The auto-apply feature in FrameCoach is one of those things that sounds simple but changes everything about how you work on set.\n\nHere's what happens when you tap that Apply button. FrameCoach takes the AI's suggested value — say, 'ISO 400' — and normalises it to your camera's API format. Then it checks your camera's current exposure mode (Program, Aperture Priority, Shutter Priority, or Manual) to make sure the setting can actually be changed in that mode. It queries your camera for the available values for that setting. It finds the best match from the available candidates. It sends the SET command via the camera's remote API. It waits 400ms for the camera to process. Then it re-reads the current value to verify the change actually took effect. If it didn't, it retries up to 2 more times.\n\nAll of that happens behind a single button tap. From your perspective: tap, done, setting applied.\n\nAnd if FrameCoach gives you multiple recommendations — say, lower ISO and open up the aperture — you can tap Apply All. It executes each recommendation sequentially with 500ms delays between them so your camera has time to process each change. Each button transitions independently through idle, loading, applied, or error states so you can see exactly what's happening.\n\nThe exposure mode guard rails are important too. If you're in Aperture Priority mode and the recommendation says to change shutter speed, FrameCoach knows that's not possible — the camera controls shutter speed in that mode. It'll tell you the constraint instead of silently failing.\n\nThis closes the loop completely. You describe your creative intent. FrameCoach analyses the scene. The math engine calculates the adjustments. The AI explains why. You tap Apply. The camera executes. You shoot.\n\nNo manual dial turning. No hunting through menus. No second-guessing whether you set the right value. Intent to execution in seconds.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#camerasettings", "#cameracoach", "#framecoach", "#filmtips", "#autoapply", "#AIfilmmaking", "#filmmakersoftiktok", "#cameragear", "#solofilmmaker", "#filmmakingtips", "#filmmakingtools"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "08-what-filmmakers-say",
     "name": "What Filmmakers Say",
     "subtitle": "Social Proof",
-    "caption": "Don't take our word for it. Here's what filmmakers are saying about FrameCoach. #filmmaking #filmmaker #reviews",
+    "caption": "Don't take our word for it. Filmmakers are using FrameCoach to nail their camera settings on set — in real time, with real confidence. An AI cinematography coach that reads your scene, understands your intent, and coaches you through the shot. See what they're saying.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #filmreviews #filmcommunity #filmmakingtips #solofilmmaker",
+    "tiktokCaption": "What filmmakers are saying about FrameCoach on set.",
+    "tiktokDescription": "When we built FrameCoach, we built it for one specific filmmaker: the solo shooter or small indie crew who knows what a great shot looks like but doesn't always have the technical confidence to execute it under pressure.\n\nThe filmmaker who's on location, light is changing, there's no DP to consult, and they need to make the right ISO/aperture/shutter decision RIGHT NOW.\n\nThat's the gap FrameCoach fills. And the response from filmmakers who've used it on set has been exactly what we hoped for.\n\nFilmmakers tell us the biggest shift is psychological. It's not just that the settings are right — it's that they KNOW the settings are right because FrameCoach shows them the math. When the app says 'your highlights are clipping at 12% and your goal tolerance is 3%, so we need to reduce exposure by 2 stops', you understand the reasoning. You're not just following a number, you're learning the principle.\n\nOver time, filmmakers report that they start internalising the cinematographic reasoning. They begin anticipating what FrameCoach will recommend before they even ask. That's the coaching model working as intended — the goal isn't dependency, it's progressive mastery.\n\nThe composition analysis gets a lot of love too. Having an AI that reads your actual frame and says 'your subject is centred but the leading line from the road could guide the viewer's eye if you shifted left' — that's the kind of feedback you'd normally only get from an experienced DP reviewing your dailies.\n\nAnd the one-tap auto-apply is the feature that converts sceptics. The moment they see a recommendation and tap Apply and watch the setting change on their camera in real time — that's when it clicks.\n\nBuilt by filmmakers. For filmmakers. framecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#filmreviews", "#filmcommunity", "#solofilmmaker", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#AIfilmmaking", "#camerasettings", "#filmset"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "09-before-and-after",
     "name": "Before and After FrameCoach",
-    "subtitle": "App Promotion",
-    "caption": "Your filmmaking before vs after FrameCoach. The glow-up is real. #filmmaking #filmmaker #glowup",
+    "subtitle": "Social Proof",
+    "caption": "Before FrameCoach: guessing settings, chimping constantly, blown highlights in post. After FrameCoach: describing your vision, getting coached in real time, nailing the exposure on the first take. The difference isn't luck. It's physics.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #beforeandafter #camerasettings #exposuretips #filmtips",
+    "tiktokCaption": "Before FrameCoach vs After. The glow-up is real on set.",
+    "tiktokDescription": "Let's be honest about what shooting looks like without confident camera settings.\n\nBefore FrameCoach: You arrive on location. The light is beautiful but tricky — golden hour with harsh backlight. You set your ISO to something that feels right. You shoot. You check the monitor. The highlights are blown. You lower the ISO. Now the shadows are crushed. You open up the aperture. Now the depth of field is too shallow for the composition you want. You try exposure compensation. You chimping after every single take. You're spending more time staring at your camera's screen than directing your subject. And by the time you figure out the right balance, golden hour is gone.\n\nAfter FrameCoach: You arrive on location. Same beautiful, tricky light. You connect your camera. You type 'protect highlights, warm golden hour mood'. FrameCoach captures a frame. In seconds: 'Your highlights are clipping at 8% — lower ISO from 800 to 200. You have headroom in the shadows. Skin tones are correctly exposed.' You tap Apply. ISO drops to 200. Done. You type 'how's the composition?' FrameCoach: 'Strong leading lines from the path. Subject is slightly left of centre — good rule of thirds placement. Consider lowering angle to include more foreground depth.' You adjust your angle, shoot, and it's perfect on the first take.\n\nThe difference isn't talent (you had talent before). The difference is having an AI cinematography coach that understands your scene at a pixel level, calculates the physics, and explains the reasoning so you can execute with confidence.\n\nNo more guessing. No more chimping. No more finding blown highlights in the edit. Just physics-grounded coaching that matches your creative vision to your camera's capabilities.\n\nThat's the before and after. framecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#beforeandafter", "#camerasettings", "#exposuretips", "#filmtips", "#filmmakersoftiktok", "#indiefilmmaker", "#solofilmmaker", "#AIfilmmaking", "#goldenhour"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "10-not-a-film-school",
-    "name": "It's Not a Film School",
+    "name": "Your AI Cinematographer On Set",
     "subtitle": "App Promotion",
-    "caption": "FrameCoach isn't a film school. It's better. Here's why. #filmmaking #filmmaker #filmschool",
+    "caption": "Imagine having an experienced cinematographer on set for every shoot. That's FrameCoach. It reads your scene, understands your creative intent, calculates the exposure math, and coaches you through the shot — all in real time. When you can't afford a DP, FrameCoach is the next best thing.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #directorofphotography #camerasettings #solofilmmaker #filmmakingtools",
+    "tiktokCaption": "Can't afford a DP? FrameCoach is your AI cinematographer on set.",
+    "tiktokDescription": "Here's the reality of indie filmmaking: most of us don't have a dedicated director of photography on set. We're the director, the camera operator, the DP, and the grip — all in one. We're making creative decisions about framing and story while simultaneously trying to remember if our ISO is introducing too much noise or if our shutter angle is right for cinematic motion blur.\n\nFrameCoach changes that equation. It's like having an experienced cinematographer standing next to you on every shoot, looking at the same scene you're looking at, and telling you exactly what to do with your camera settings and why.\n\nThe key word is 'why'. FrameCoach doesn't just spit out numbers. When it recommends lowering your ISO from 800 to 200, it tells you the reason: 'Your highlights are clipping at 12% against your 3% tolerance. Lowering ISO by 2 stops brings them back within range and reduces noise in your shadow detail.' You're learning cinematographic reasoning with every interaction.\n\nThe composition analysis adds another dimension. While the exposure pipeline handles the technical settings, a separate multimodal vision system analyses your frame composition: rule of thirds placement, subject positioning, visual balance, leading lines, depth separation. It gives you 1-3 specific observations with actionable suggestions — the kind of feedback that usually comes from an experienced DP reviewing dailies.\n\nAnd because FrameCoach understands your camera's specific capabilities — it knows the base ISO, native dynamic range, dual-native ISO thresholds, and noise floor profile of 20+ camera models — every recommendation respects your hardware limits. It will never suggest a setting your camera can't actually achieve.\n\nThe gap between a solo filmmaker and a filmmaker with a great DP just got a lot smaller.\n\nframecoach.io — the decision layer for your camera.",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#directorofphotography", "#camerasettings", "#solofilmmaker", "#filmmakersoftiktok", "#indiefilmmaker", "#AIfilmmaking", "#filmmakingtips", "#filmmakingtools", "#cameragear"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "11-the-framecoach-manifesto",
     "name": "The FrameCoach Manifesto",
     "subtitle": "Our Beliefs",
-    "caption": "This is what we believe. This is why we built FrameCoach. #filmmaking #filmmaker #manifesto",
+    "caption": "We believe camera knowledge should be accessible to every filmmaker. We believe the gap between creative vision and technical execution should not exist. We believe math should be the brain and coaching should be the voice. We believe filmmakers should focus on storytelling, not settings. This is the FrameCoach manifesto.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #filmmakingcommunity #manifesto #storytelling #storyovergear",
+    "tiktokCaption": "The FrameCoach Manifesto. What we believe. Why we build.",
+    "tiktokDescription": "Every product is built on a set of beliefs. Here are ours.\n\nWe believe camera knowledge should be accessible to every filmmaker — not just those who went to film school or spent decades on set. The principles of exposure, composition, and cinematographic storytelling are not secrets. They're physics and visual language. They should be democratised.\n\nWe believe the gap between creative vision and technical execution should not exist. When you see a shot in your mind's eye — the mood, the light, the feeling — your camera settings should serve that vision, not obstruct it. The technology should be invisible. The creativity should be everything.\n\nWe believe math should be the brain and coaching should be the voice. That's why FrameCoach uses a deterministic exposure engine grounded in stops-based arithmetic and real physics — not an AI that guesses settings. The math calculates what needs to change and by how much. The AI communicates why in filmmaker-friendly language. Recommendations you can trust because they're grounded in the same math your light meter uses.\n\nWe believe filmmakers should focus on storytelling, not settings. Every second you spend chimping — checking and rechecking your exposure — is a second you're not directing, not composing, not capturing the moment. FrameCoach handles the technical decisions so you can stay in the creative zone.\n\nWe believe in progressive mastery. FrameCoach isn't designed to create dependency. Every recommendation comes with an explanation of the underlying principle. Over time, you start anticipating the coaching. You internalise the reasoning. You become a better filmmaker. The best outcome is the day you don't need the app anymore.\n\nWe believe story matters more than gear. FrameCoach helps you work confidently with whatever camera you already have. It's not about buying better equipment. It's about using your equipment better.\n\nThis is the FrameCoach manifesto. This is why we build.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#manifesto", "#storyovergear", "#storytelling", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#filmmakingcommunity", "#AIfilmmaking", "#camerasettings"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "12-frame-your-story",
     "name": "Frame Your Story",
     "subtitle": "Brand",
-    "caption": "Every story deserves to be framed beautifully. Here's how we help. #filmmaking #storytelling #cinematography",
+    "caption": "Every frame tells a story. FrameCoach makes sure the technical execution matches the creative vision. Real-time exposure coaching. Composition analysis. One-tap settings. Because the best stories are framed beautifully — and you shouldn't need a full crew to achieve that.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #storytelling #indiefilm #filmtips #composition #framing",
+    "tiktokCaption": "Every story deserves to be framed perfectly. FrameCoach ensures it.",
+    "tiktokDescription": "Filmmaking is storytelling through frames. Every single frame in your film communicates something — mood, tension, intimacy, scale. The way light falls on your subject, the depth of field that isolates them from the background, the composition that guides the viewer's eye — these are the tools of visual storytelling.\n\nBut here's the tension every indie filmmaker faces: you know what the frame should feel like. You can see it in your mind. The challenge is translating that feeling into the precise technical settings that bring it to life on camera.\n\nThat's the gap FrameCoach bridges.\n\nYou describe the story you want to tell with your frame: 'warm intimate close-up with shallow depth of field' or 'dramatic backlit silhouette with protected highlights'. FrameCoach reads your actual scene — the light, the subject, the environment — and coaches you through the exact settings that will bring your vision to reality.\n\nThe exposure coaching ensures your image is technically sound. No blown highlights unless you want them. No crushed shadows unless that's the look. Skin tones properly exposed even in challenging mixed lighting. All calculated from real physics, not approximations.\n\nThe composition analysis ensures your frame tells the story effectively. Rule of thirds, subject placement, leading lines, visual balance, depth separation — FrameCoach reads your frame the way an experienced DP would and gives you actionable suggestions to strengthen the composition.\n\nAnd because every recommendation comes with an explanation of WHY, you're building your visual storytelling vocabulary with every shoot. You start understanding the relationship between ISO and noise, between aperture and depth, between shutter speed and motion. The technical choices become creative tools in your storytelling arsenal.\n\nFrame your story. Let FrameCoach handle the science.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#storytelling", "#composition", "#framing", "#filmtips", "#filmmakersoftiktok", "#indiefilmmaker", "#visualstorytelling", "#filmmakingtips", "#directorofphotography"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "13-built-by-filmmakers",
     "name": "Built by Filmmakers",
     "subtitle": "Our Story",
-    "caption": "FrameCoach was built by filmmakers, for filmmakers. This is our story. #filmmaking #filmmaker #indiefilm",
+    "caption": "FrameCoach was built by filmmakers who lived the problem. We've been on set without a DP, guessing settings, losing golden hour to trial and error. We built the tool we wished we had — an AI cinematography coach that reads the scene, does the math, and coaches the shot. Built by filmmakers. For filmmakers.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #startup #builtbyfilmmakers #filmcommunity #filmmakingtools",
+    "tiktokCaption": "Built by filmmakers who were tired of guessing on set.",
+    "tiktokDescription": "FrameCoach wasn't born in a tech lab. It was born on film sets.\n\nWe're filmmakers. We've been the solo shooter on location with beautiful light disappearing while we fumble with ISO and aperture trying to get the exposure right. We've been the indie director who can't afford a dedicated DP, making camera decisions while simultaneously trying to direct talent and manage a tiny crew. We've been the content creator who knows the shot could be better but isn't sure exactly why.\n\nWe built FrameCoach because we lived the problem every single shoot.\n\nThe core insight was this: the math behind good exposure isn't complicated. It's stops-based arithmetic — the same calculations a light meter performs internally. The challenge is that most filmmakers don't think in stops and zone systems. They think in feelings and moods and stories. There needed to be a bridge between creative intent and technical execution.\n\nSo we built one.\n\nThe deterministic math engine handles the physics: histogram analysis, zone system mapping, clipping detection, skin tone analysis, dynamic range estimation. It calculates exactly what needs to change and by how much, respecting your specific camera's hardware limits.\n\nThe AI coaching layer handles the communication: translating math into filmmaker-friendly language, explaining the reasoning behind every recommendation, building your understanding over time.\n\nThe auto-apply feature closes the loop: one tap to send settings directly to your camera.\n\nAnd the composition analysis adds the creative eye: reading your frame for rule of thirds, subject placement, leading lines, balance, and depth.\n\nEvery feature in FrameCoach exists because one of us was on set and thought 'I wish I had this.' Not because a product manager dreamed it up. Because a filmmaker needed it.\n\nBuilt by filmmakers. For filmmakers. That's not a tagline — it's the literal origin story.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#builtbyfilmmakers", "#startup", "#filmcommunity", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#solofilmmaker", "#AIfilmmaking", "#filmmakingtools"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "14-what-makes-a-great-filmmaker",
-    "name": "What Makes a Great Filmmaker",
-    "subtitle": "Filmmaker Mindset",
-    "caption": "What separates good filmmakers from great ones? It's not what you think. #filmmaking #filmmaker #mindset",
+    "name": "What FrameCoach Analyses",
+    "subtitle": "Filmmaker Education",
+    "caption": "When you capture a frame, FrameCoach analyses:\n\n1. Luminance histogram (256 bins, BT.709)\n2. Ansel Adams zone distribution\n3. Highlight and shadow clipping\n4. Skin tone exposure (YCbCr)\n5. Dynamic range utilisation\n6. Composition (rule of thirds, balance, depth)\n\nAll in seconds. All explained in plain English.\n\n#filmmaking #filmmaker #cinematography #exposure #cameracoach #framecoach #zonesystem #histogram #filmtips #filmmakingtools",
+    "tiktokCaption": "Everything FrameCoach analyses in your frame. In seconds.",
+    "tiktokDescription": "When you tap send in FrameCoach, a lot happens in a very short amount of time. Here's exactly what the analysis pipeline does to your captured frame.\n\nStage 1: Histogram Building. FrameCoach decodes your JPEG to raw RGBA pixels and builds 256-bin histograms for red, green, blue, and luminance channels. Luminance is calculated using the BT.709 standard: L = 0.2126R + 0.7152G + 0.0722B. The output is normalised to percentages so the math engine can work with relative values regardless of image resolution.\n\nStage 2: Ansel Adams Zone Analysis. The 256 luminance values are mapped into 11 zones — from Zone 0 (pure black) through Zone 5 (middle grey, 18% reflectance) to Zone 10 (pure white). This isn't just a technical mapping — it's the same zone system that Ansel Adams developed and that cinematographers have used for decades. FrameCoach detects bimodal distributions (two or more peaks separated by 4+ zones) and skewed distributions (highlight or shadow heavy), which tell it about the character of your scene's dynamic range.\n\nStage 3: Clipping Detection. Highlight clipping is measured as pixels in luminance 253-255. Shadow crushing is pixels in luminance 0-2. Severity is classified: severe (>5%), moderate (2-5%), minor (0.5-2%), or none (<0.5%). This analysis runs per-channel (RGB) so it catches colour-specific clipping — like red channel blowout in a sunset. When people are detected in the frame, it analyses subject vs background clipping separately.\n\nStage 4: Skin Tone Detection. Pixels are converted to YCbCr colour space (ITU-R BT.601) and checked against two detection ranges — standard for lighter skin tones and extended for darker skin tones. If skin is detected, exposure classification tells you if it's underexposed, correct, or overexposed. This ensures people in your shots are always properly lit.\n\nStage 5: Dynamic Range Estimation. FrameCoach calculates your camera's available dynamic range at your current ISO using a camera database of 20+ models, then measures how much of that range you're actually using.\n\nStage 6 (parallel): Composition Analysis. A multimodal vision AI analyses rule of thirds, subject placement, visual balance, framing, leading lines, and depth.\n\nAll of this feeds into the deterministic math engine which calculates your recommendations. Science serving storytelling.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#exposure", "#zonesystem", "#histogram", "#filmtips", "#filmmakersoftiktok", "#indiefilmmaker", "#AIfilmmaking", "#filmmakingtips", "#filmmakingtools"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "15-every-frame-tells-a-story",
-    "name": "Every Frame Tells a Story",
-    "subtitle": "Cinematic Thinking",
-    "caption": "Every single frame tells a story. Are you making yours count? #filmmaking #cinematography #storytelling",
+    "name": "Every Frame Is a Decision",
+    "subtitle": "Brand",
+    "caption": "Every frame is a decision. ISO, aperture, shutter speed, white balance, composition — each choice shapes the story you're telling. FrameCoach ensures every decision is grounded in physics and guided by your creative vision. The decision layer for your camera.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #storytelling #camerasettings #decisions #filmtips",
+    "tiktokCaption": "Every frame is a decision. Make sure it's the right one.",
+    "tiktokDescription": "Think about how many decisions go into a single frame of your film.\n\nISO — how sensitive is your sensor? Higher means more light but more noise. Lower means cleaner images but you need more light. There's a sweet spot for every scene, and it depends on your camera's specific noise profile and dual-native ISO characteristics.\n\nAperture — how wide is your lens opening? Wider means more light and shallower depth of field. Narrower means less light but more of your scene in focus. The creative implications are massive — a wide open aperture isolates your subject, a stopped down aperture keeps the environment in the story.\n\nShutter speed — how long is each frame exposed? In cinema, the 180-degree rule gives you a standard (1/48 at 24fps, 1/50 at 25fps). Deviate from it and you change the motion characteristics of your image. Faster freezes action, slower introduces motion blur.\n\nWhite balance — what's neutral in your scene? Daylight, tungsten, fluorescent, mixed? Get it wrong and your skin tones suffer. Get it right and the mood of the scene comes alive.\n\nComposition — where is your subject in the frame? What lines guide the viewer's eye? Is the visual weight balanced? Is there depth between foreground, midground, and background?\n\nEvery single one of these decisions affects the story your frame tells. And on set, you're making all of them simultaneously, under time pressure, often without a dedicated DP to consult.\n\nFrameCoach handles the technical execution of these decisions. You describe the story you want to tell — the mood, the feeling, the intent. The deterministic math engine calculates the optimal settings. The AI coaching layer explains why. The composition analysis reads your frame. One tap to apply.\n\nEvery frame is a decision. FrameCoach makes sure it's an informed one.\n\nframecoach.io — the decision layer for your camera.",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#storytelling", "#camerasettings", "#filmtips", "#directorofphotography", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#composition", "#filmmakingtools"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "16-the-creators-mindset",
-    "name": "The Creator's Mindset",
-    "subtitle": "Mindset",
-    "caption": "The mindset that separates creators from consumers. Which one are you? #filmmaking #creator #mindset",
+    "name": "Story Over Gear",
+    "subtitle": "Our Beliefs",
+    "caption": "Your story matters more than your gear. FrameCoach helps you work confidently with whatever camera you already have. It knows your camera's capabilities and coaches you to get the most out of it. Better settings, better technique, better stories — no equipment upgrades required.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #storyovergear #indiefilm #storytelling #filmtips #filmmakingcommunity",
+    "tiktokCaption": "Story over gear. FrameCoach maximises whatever camera you own.",
+    "tiktokDescription": "The filmmaking internet loves gear. New cameras, new lenses, new rigs. The message is constant: if you want better work, buy better equipment.\n\nWe believe the opposite. Story matters more than gear. And the biggest upgrade most filmmakers can make isn't buying a new camera — it's learning to use the one they already have.\n\nThat's a core principle behind FrameCoach. The app knows the specific capabilities of your camera model. It has a database of 20+ Sony cameras with detailed specs: base ISO, native dynamic range, dual-native ISO thresholds, noise floor profiles, available setting values. When FrameCoach recommends lowering your ISO or adjusting your aperture, it's recommending values your camera can actually achieve. It's working within your hardware limits, not suggesting theoretical ideals.\n\nThis means whether you're shooting on a Sony A6400 or an A7S III, FrameCoach coaches you to get the absolute best image quality your camera is capable of. It understands that your camera's dynamic range decreases as ISO increases (specifically: DR = baseDR - 0.5 x log2(ISO/baseISO)). It knows which ISO values sit on the dual-native sweet spots. It respects the available f-stop increments and shutter speed options your specific body offers.\n\nThe result: you discover that your camera can do far more than you thought. Not because you were doing anything wrong — but because having real-time, physics-grounded coaching unlocks capabilities that were always there.\n\nEvery filmmaker we've worked with who uses FrameCoach consistently tells us the same thing: they've stopped thinking about upgrading their camera. Because they're finally getting images out of their current body that they didn't know were possible.\n\nStory over gear. Use what you have. Use it well. Let FrameCoach help.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#storyovergear", "#storytelling", "#cameragear", "#filmtips", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#solofilmmaker", "#filmmakingcommunity"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "17-why-we-built-framecoach",
     "name": "Why We Built FrameCoach",
-    "subtitle": "Origin Story",
-    "caption": "The real reason we built FrameCoach. It wasn't for the money. #filmmaking #filmmaker #startup",
+    "subtitle": "Our Story",
+    "caption": "We built FrameCoach because the gap between creative vision and technical execution shouldn't require years of trial and error to close. Because exposure math isn't complicated — it just needs to be communicated differently. Because every filmmaker deserves an AI cinematographer on set.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #startup #originstory #filmcommunity #filmmakingtools",
+    "tiktokCaption": "Why we built FrameCoach. The real reason behind the app.",
+    "tiktokDescription": "The moment that started FrameCoach happened on an indie film set.\n\nWe were shooting a short film — small crew, no dedicated DP. The director was also operating the camera. Golden hour was starting, the light was beautiful but changing fast. The director knew the shot they wanted: warm backlight, subject properly exposed, highlights protected.\n\nBut translating that vision into camera settings in real time? That's where things fell apart. ISO too high — noise in the shadows. ISO lowered — now underexposed. Aperture opened up — depth of field too shallow for the composition. Back and forth for fifteen minutes. By the time the settings were right, the light had changed. Golden hour was gone.\n\nThat's the moment. Not because the filmmaker lacked talent or knowledge — they understood the principles. But under time pressure, with changing light, without a DP to consult, the technical execution couldn't keep up with the creative vision.\n\nWe started with a question: what if there was a system that could read the actual scene — not a theoretical scenario, but THIS specific frame from THIS camera in THIS light — and calculate the exact settings needed to achieve the filmmaker's stated intent?\n\nThe answer became FrameCoach. A hybrid system where deterministic exposure math provides the brain (stops-based calculations grounded in physics, clamped to hardware limits) and AI coaching provides the voice (translating math into filmmaker-friendly explanations that build understanding over time).\n\nThe separation between math and language is critical. The math engine never guesses. It calculates. The AI never decides settings. It explains them. This means recommendations are physically grounded, not hallucinated.\n\nWe added composition analysis because a great shot isn't just about exposure. We added auto-apply because knowing the right setting and actually setting it on the camera should be the same action. We added anti-oscillation because you shouldn't get contradictory advice between captures.\n\nEvery feature exists because we've been on set and needed it.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#startup", "#originstory", "#filmcommunity", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#solofilmmaker", "#goldenhour", "#filmmakingtools"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "18-your-content-deserves-better",
-    "name": "Your Content Deserves Better",
-    "subtitle": "Level Up",
-    "caption": "Your content deserves better production quality. Level up with FrameCoach. #filmmaking #contentcreator #levelup",
+    "name": "Your Content Deserves Better Exposure",
+    "subtitle": "App Promotion",
+    "caption": "Your content deserves technically excellent footage. FrameCoach coaches you to nail the exposure, protect the highlights, and perfect the composition — in real time, on set. Better footage starts with better decisions. Better decisions start with FrameCoach.\n\n#filmmaking #filmmaker #contentcreator #cinematography #cameracoach #framecoach #camerasettings #exposuretips #filmtips #levelup",
+    "tiktokCaption": "Your content deserves better exposure. FrameCoach delivers it.",
+    "tiktokDescription": "Content creators, this one's for you.\n\nYou know the difference between content that looks amateur and content that looks professional. It's not the camera body. It's not the lens. It's the exposure, the lighting decisions, the composition, and the colour — the technical foundation that either supports or undermines your creative work.\n\nAnd the frustrating part? The gap between amateur-looking and professional-looking footage often comes down to camera settings that could be fixed on set if you had the right guidance.\n\nThat's exactly what FrameCoach provides. Real-time, physics-grounded coaching for your camera settings while you're shooting.\n\nHere's a scenario: you're shooting a talking-head video. Natural light from a window, mixed with overhead fluorescent. Your skin tones look slightly green. Your highlights on the window side are clipping. You're not sure if it's the ISO, the white balance, or both.\n\nWith FrameCoach: describe the situation ('protect highlights, correct skin tones'). The app captures your frame, detects skin tones using YCbCr colour space analysis, measures highlight clipping at 8% against a 3% tolerance, identifies the mixed lighting condition from the scene classification. The math engine calculates: lower ISO by 1.5 stops, adjust white balance to counteract the fluorescent cast. The coaching layer explains why each change matters. One tap to apply.\n\nThe difference in your final footage is massive. Properly exposed skin tones, protected highlights, accurate colour. And because you understood the WHY behind each adjustment, you'll start catching these issues earlier on future shoots.\n\nFrameCoach doesn't make you dependent — it makes you better. Every recommendation is a micro-lesson in cinematography. Over time, you internalise the principles and your baseline quality rises permanently.\n\nYour content deserves the technical foundation of professional filmmaking. FrameCoach gives you that.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#contentcreator", "#cinematography", "#cameracoach", "#framecoach", "#camerasettings", "#exposuretips", "#filmtips", "#levelup", "#filmmakersoftiktok", "#contentcreation", "#videography", "#filmmakingtips", "#solofilmmaker"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "19-5-composition-rules",
-    "name": "5 Composition Rules",
-    "subtitle": "Composition Series",
-    "caption": "5 composition rules every filmmaker needs to know. Save this for your next shoot. #filmmaking #composition #cinematography",
+    "name": "How FrameCoach Reads Composition",
+    "subtitle": "Filmmaker Education",
+    "caption": "FrameCoach doesn't just coach exposure — it reads your composition too. Rule of thirds, subject placement, leading lines, visual balance, depth, and framing. A parallel AI vision system analyses your actual frame and gives you specific, actionable feedback to strengthen every shot.\n\n#filmmaking #filmmaker #cinematography #composition #cameracoach #framecoach #ruleofthirds #framing #filmtips #directorofphotography",
+    "tiktokCaption": "FrameCoach reads your composition and coaches it in real time.",
+    "tiktokDescription": "Most camera apps stop at exposure. FrameCoach goes further with real-time composition analysis.\n\nHere's how it works: alongside the exposure analysis pipeline, a separate multimodal AI vision system analyses your captured frame specifically for composition. It runs in parallel — using GPT-4.1 mini with vision capabilities — and focuses exclusively on visual framing. No exposure, no colour grading. Pure composition.\n\nThe six aspects it analyses:\n\nRule of thirds: Where are your subjects and key elements positioned relative to the thirds grid? Are you using the power points (intersections) effectively, or is everything dead centre?\n\nSubject placement: Where is your main subject in the frame? Is the positioning intentional and serving the story, or is it arbitrary?\n\nVisual balance: Is the visual weight distributed effectively? Symmetrical compositions feel stable and formal. Asymmetrical compositions feel dynamic and energetic. Neither is wrong — but the choice should be intentional.\n\nFraming: Are you using foreground or background elements as natural frames? A doorway, an archway, overhanging branches — these create depth and draw the viewer's eye to your subject.\n\nLeading lines: Are there lines in your scene that guide the viewer's eye? Roads, fences, shadows, architectural lines — these can be powerful compositional tools when used intentionally.\n\nDepth: Is there separation between foreground, midground, and background? Depth creates dimension in a 2D medium and makes your frames feel three-dimensional and immersive.\n\nFor each aspect, FrameCoach provides an observation (what it sees in your frame) and a suggestion (what you could do to improve it), rated by strength (strong, moderate, or weak). You get 1-3 specific tips per frame — not generic advice, but feedback based on your actual composition.\n\nThe composition analysis is non-fatal — if it fails for any reason, your exposure coaching is still delivered normally. And you can toggle it on or off depending on whether you want composition feedback for that particular session.\n\nExposure is the science. Composition is the art. FrameCoach coaches both.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#composition", "#cameracoach", "#framecoach", "#ruleofthirds", "#framing", "#filmtips", "#filmmakersoftiktok", "#indiefilmmaker", "#directorofphotography", "#filmmakingtips", "#leadinglines", "#visualstorytelling"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "20-one-light-cinematography",
-    "name": "One-Light Cinematography",
-    "subtitle": "Lighting Series",
-    "caption": "You don't need expensive lighting. One light is all it takes. Here's how. #filmmaking #lighting #cinematography",
+    "name": "Scene-Aware Intelligence",
+    "subtitle": "App Promotion",
+    "caption": "FrameCoach doesn't just read your settings — it reads your scene. On-device AI detects people, estimates lighting conditions, classifies the environment, and analyses subject distance. All before the frame even leaves your phone. Scene-aware intelligence for smarter recommendations.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #AI #sceneclassification #filmtips #camerasettings #filmmakingtools",
+    "tiktokCaption": "FrameCoach reads your scene before it even starts coaching.",
+    "tiktokDescription": "Before FrameCoach's exposure analysis even begins, something happens on your phone that most users never think about. On-device scene intelligence.\n\nUsing Apple's Vision framework — the same ML system that powers face detection in your camera app — FrameCoach runs three simultaneous analysis passes on your captured frame, entirely on-device:\n\nPerson detection: VNDetectHumanRectanglesRequest finds full-body person bounding boxes with confidence scores. If that misses, VNDetectFaceRectanglesRequest runs as a fallback. This tells FrameCoach there are people in your shot and where they are in the frame.\n\nScene classification: VNClassifyImageRequest returns the top 5 scene labels with confidence scores (weighted scoring across 30 labels, filtered by confidence > 0.3). This tells FrameCoach whether you're indoors, outdoors, in a studio, or in an unknown environment.\n\nFrom these raw detections, FrameCoach derives four critical pieces of context:\n\nSubject distance — estimated from the bounding box area. If the person takes up more than 25% of the frame, it's a close-up. More than 8%, medium shot. More than 2%, full body. Less than 2%, far shot.\n\nSubject placement — analysed against the rule of thirds. Centre (0.33-0.67), left third (<0.33), or right third (>0.67).\n\nLighting condition — inferred from the scene classification labels: natural, artificial, mixed, backlit, or low-light.\n\nScene type — indoor, outdoor, studio, or unknown, with a confidence score.\n\nWhy does all of this matter? Because it makes the exposure coaching dramatically smarter.\n\nIf a person is detected, skin tone exposure gets prioritised. The system analyses subject vs background clipping separately — a blown-out sky behind a correctly-exposed face is acceptable; a blown-out face is not.\n\nIf the scene is classified as backlit, the coaching adapts to that challenge. If it's low-light, noise management becomes more important in the recommendations.\n\nAll of this runs in ~100-300ms and is completely non-fatal — if the classification fails, the exposure pipeline proceeds with reduced context. But when it works (which is most of the time), it transforms generic exposure coaching into scene-specific, subject-aware cinematographic guidance.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#AI", "#sceneclassification", "#camerasettings", "#filmtips", "#filmmakersoftiktok", "#indiefilmmaker", "#AIfilmmaking", "#filmmakingtips", "#filmmakingtools"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "21-essential-shot-types",
-    "name": "Essential Shot Types",
-    "subtitle": "Shot Guide",
-    "caption": "Every filmmaker needs these shots in their toolkit. How many do you use? #filmmaking #cinematography #shots",
+    "name": "Real-Time Exposure Coaching",
+    "subtitle": "App Promotion",
+    "caption": "Real-time exposure coaching, not a calculator. FrameCoach analyses your actual frame — histogram, zone system, clipping, skin tones, dynamic range — and coaches you through the exact adjustments you need. The math engine calculates. The AI explains. You learn and apply.\n\n#filmmaking #filmmaker #cinematography #exposure #cameracoach #framecoach #camerasettings #filmtips #zonesystem #indiefilm",
+    "tiktokCaption": "Real-time exposure coaching. Not a calculator. A coach.",
+    "tiktokDescription": "There's a critical difference between a calculator and a coach. A calculator gives you numbers. A coach tells you what to do, why to do it, and helps you get better over time.\n\nFrameCoach is a coach.\n\nWhen you capture a frame, the exposure analysis pipeline processes your actual image through five stages: histogram building (256 bins, BT.709 luminance), Ansel Adams zone analysis (11 zones from pure black to pure white), clipping detection (highlight and shadow, per-channel, subject-aware), skin tone analysis (YCbCr colour space with diversity-inclusive ranges), and dynamic range estimation (calculated against your specific camera model at your current ISO).\n\nAll of that data feeds into the deterministic math engine — the brain of the system. This engine uses stops-based arithmetic to calculate exactly what needs to change and by how much:\n\nISO adjustments: calculated as log2(targetISO / currentISO) stops\nAperture adjustments: calculated as 2 x log2(currentF / targetF) stops (quadratic because f-numbers are squared)\nShutter speed adjustments: calculated as log2(targetDuration / currentDuration) stops\n\nAll values snap to standard 1/3-stop increments — the same click values your camera dial produces.\n\nThe priority ordering is goal-aware. For most goals, ISO is adjusted first (safest, no creative side effects), then aperture, then shutter speed. But if your goal involves depth of field ('shallow', 'bokeh'), aperture becomes the creative variable and is adjusted last. If your goal involves motion ('blur', 'freeze'), shutter speed is the creative variable.\n\nThe result: 0-3 prioritised actions, each with your current value, the suggested value, and a plain-English explanation of the reasoning. Not 'change ISO to 400' but 'Lower ISO from 800 to 400 — your highlights are clipping at 8% against a 3% tolerance. Reducing by 1 stop brings them within range and reduces noise in your shadow detail.'\n\nThat's coaching. Understanding the WHY makes you better. Every interaction is a micro-lesson in cinematography.\n\nframecoach.io — the decision layer for your camera.",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#exposure", "#cameracoach", "#framecoach", "#camerasettings", "#zonesystem", "#filmtips", "#filmmakersoftiktok", "#indiefilmmaker", "#AIfilmmaking", "#filmmakingtips", "#filmmakingtools"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "22-color-grading-mistakes",
-    "name": "Color Grading Mistakes",
-    "subtitle": "Colour Series",
-    "caption": "Stop making these color grading mistakes. Your footage will thank you. #filmmaking #colorgrading #cinematography",
+    "name": "Understanding the Zone System",
+    "subtitle": "Filmmaker Education",
+    "caption": "FrameCoach uses the Ansel Adams zone system to analyse your exposure. 11 zones from pure black (Zone 0) to pure white (Zone 10). Zone 5 is middle grey. FrameCoach maps your histogram to these zones and detects where your image lives — and where it needs to go.\n\n#filmmaking #filmmaker #cinematography #zonesystem #exposure #cameracoach #framecoach #filmtips #enseladams #camerasettings",
+    "tiktokCaption": "The zone system — how FrameCoach reads your exposure like a pro.",
+    "tiktokDescription": "The Ansel Adams zone system is one of the most powerful frameworks in photographic exposure. It divides the tonal range of an image into 11 zones, from pure black to pure white. And it's at the heart of how FrameCoach analyses your shots.\n\nHere's the breakdown:\n\nZone 0 (Luminance 0-23): Pure black. No detail. This is the deepest shadow in your image.\n\nZone 1-2 (Luminance 24-69): Near black to very dark shadows. Barely any visible detail.\n\nZone 3 (Luminance 70-93): Dark shadows with detail. This is the darkest zone where texture and detail are visible — shadows on a face, the texture of dark fabric.\n\nZone 4 (Luminance 94-115): Dark foliage, dark stone, shadow side of a face in side lighting. Clear detail.\n\nZone 5 (Luminance 116-139): Middle grey. 18% reflectance. This is the anchor point of the exposure system — what your camera's light meter is calibrated to. A grey card, weathered wood, the north sky on a clear day.\n\nZone 6 (Luminance 140-162): Light skin in open shade. Bright foliage. Concrete.\n\nZone 7 (Luminance 163-186): Bright highlights with detail. Light skin in sunlight. Snow with texture. This is the brightest zone where detail is fully preserved.\n\nZone 8-9 (Luminance 187-232): Very bright highlights, losing detail. Specular reflections, bright sky.\n\nZone 10 (Luminance 233-255): Pure white. No detail. Light sources, specular highlights.\n\nWhen FrameCoach analyses your frame, it maps every pixel to one of these 11 zones and builds a distribution profile. This tells the system several critical things:\n\nIs the distribution skewed? (More than 35% of pixels concentrated in highlights or shadows)\nIs there a bimodal distribution? (Two or more peaks separated by 4+ zones — indicating a high dynamic range scene)\nWhere are the key tones falling? (Are skin tones in Zone 5-6 where they should be, or are they pushed into Zone 3-4 where detail gets lost?)\n\nThis zone analysis, combined with clipping detection and dynamic range estimation, gives the deterministic math engine everything it needs to calculate precise exposure adjustments.\n\nThe zone system has been guiding master photographers and cinematographers for decades. FrameCoach brings it to your phone.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#zonesystem", "#exposure", "#cameracoach", "#framecoach", "#filmtips", "#enseladams", "#camerasettings", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#histogram", "#filmmakingtools"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "23-camera-movements",
-    "name": "Camera Movements",
-    "subtitle": "Movement Series",
-    "caption": "Master these camera movements and your films will never look the same. #filmmaking #camerawork #cinematography",
+    "name": "Works With Your Camera",
+    "subtitle": "App Promotion",
+    "caption": "FrameCoach connects directly to your Sony or Canon camera via WiFi. Live view streaming. Real-time settings reading. One-tap auto-apply. It knows your camera's specs — base ISO, dynamic range, dual-native thresholds, available settings. Coaching tailored to YOUR hardware.\n\n#filmmaking #filmmaker #cinematography #sony #canon #cameracoach #framecoach #cameragear #camerasettings #filmmakingtools",
+    "tiktokCaption": "FrameCoach connects to your Sony or Canon. Coaches your camera.",
+    "tiktokDescription": "FrameCoach isn't a standalone app that works in isolation. It physically connects to your camera and communicates with it in real time.\n\nHere's the technical reality of how that connection works.\n\nWhen you add a camera to FrameCoach, you scan a QR code or enter your camera's WiFi SSID. The password gets stored securely in the iOS Keychain. The profile metadata (SSID, camera model, manufacturer, IP, port) is saved for quick reconnection.\n\nTapping a camera profile triggers a WiFi join. Your phone connects to the camera's WiFi hotspot. But here's the engineering challenge: the camera's WiFi has no internet. Your phone needs both the camera connection (for frames and settings) AND cellular data (for the AI analysis pipeline). Both at the same time.\n\nFrameCoach solves this with a dual-pipe architecture. Three separate connection handlers maintain interface-specific routing: WiFi-bound for all camera communication (frames, settings, control commands), cellular-bound for all API calls (the AI analysis pipeline), and a general fallback. This runs on Apple's Network.framework using NWConnection, which bypasses iCloud Private Relay (which would otherwise break local network communication).\n\nOnce connected, FrameCoach streams live view frames from your camera at ~2fps via the camera's native protocol (Sony JSON-RPC over HTTP, Canon equivalent). The frame appears in a floating preview so you always see what your camera sees.\n\nThe auto-apply feature sends setting changes back through the same WiFi connection. When you tap Apply, FrameCoach sends the recommended value through your camera's remote API, then verifies the change took effect by re-reading the current value.\n\nAnd critically: FrameCoach knows your camera. It maintains a database of 20+ camera models with specs including base ISO, native dynamic range, dual-native ISO thresholds, and noise floor profiles. Every recommendation respects your specific hardware's capabilities. It will never suggest a setting your camera can't achieve.\n\nSony and Canon cameras currently supported. More on the way.\n\nframecoach.io — the decision layer for your camera.",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#sony", "#canon", "#cameracoach", "#framecoach", "#cameragear", "#camerasettings", "#filmmakersoftiktok", "#indiefilmmaker", "#AIfilmmaking", "#filmmakingtips", "#filmmakingtools", "#solofilmmaker"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "24-180-degree-rule",
-    "name": "180 Degree Rule",
-    "subtitle": "Filmmaking 101",
-    "caption": "The 180-degree rule explained in seconds. Never confuse your audience again. #filmmaking #directing #filmtips",
+    "name": "The 180-Degree Shutter Rule",
+    "subtitle": "Filmmaker Education",
+    "caption": "The 180-degree shutter rule: your shutter speed should be double your frame rate. 24fps = 1/48 shutter. 25fps = 1/50. FrameCoach respects this rule — it won't adjust your shutter speed away from cinema standards unless your goal specifically involves motion. Physics-aware coaching.\n\n#filmmaking #filmmaker #cinematography #shutterrule #180degreerule #cameracoach #framecoach #filmtips #camerasettings #motionblur",
+    "tiktokCaption": "The 180-degree shutter rule. Why FrameCoach respects it.",
+    "tiktokDescription": "The 180-degree shutter rule is one of the foundational principles of cinematic motion. And it's built into the core logic of how FrameCoach makes recommendations.\n\nThe rule is simple: for natural-looking motion blur in cinema, your shutter angle should be 180 degrees. In practical terms, this means your shutter speed should be approximately double your frame rate. Shooting at 24fps? Your shutter should be 1/48 (or the nearest available, 1/50). Shooting at 25fps? Shutter at 1/50. Shooting at 30fps? Shutter at 1/60.\n\nThis ratio produces motion blur that looks natural to the human eye. It's what audiences have been trained to perceive as 'cinematic' over a century of filmmaking. Deviate from it — faster shutter for sharper, more staccato motion (think Saving Private Ryan's beach scene at 1/500) or slower shutter for dreamier, more blurred motion — and you change the emotional quality of the image.\n\nIn FrameCoach's deterministic math engine, the 180-degree rule is encoded as a constraint. When the engine calculates exposure adjustments, it uses a goal-aware priority ordering:\n\nDefault priority (most goals): ISO first, then Aperture, then Shutter Speed. ISO is adjusted first because it's the safest change — no creative side effects. Shutter speed is last because changing it away from the 180-degree standard alters motion characteristics.\n\nDOF goals ('shallow', 'bokeh'): ISO first, then Shutter Speed, then Aperture. Aperture is last because it's the creative variable for depth of field.\n\nMotion goals ('blur', 'freeze'): ISO first, then Aperture, then Shutter Speed. In this case, shutter speed IS the creative variable, so it's adjusted last and only when it's specifically what the user wants to control.\n\nThe eval harness that validates FrameCoach's pipeline includes a dedicated 180-degree rule assertion: it flags any recommendation that changes shutter speed away from cinema standard values (1/48, 1/50, 1/60) unless the user's goal explicitly involves motion.\n\nThis is what 'physics-aware coaching' means. FrameCoach doesn't just know the math — it understands the cinematographic conventions that give the math meaning.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#shutterrule", "#180degreerule", "#cameracoach", "#framecoach", "#filmtips", "#camerasettings", "#motionblur", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#filmmakingtools", "#cinematicmotionblur"],
     "slideCount": 6,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png"]
   },
   {
     "id": "25-cinematic-b-roll",
-    "name": "Cinematic B-Roll",
-    "subtitle": "B-Roll Tips",
-    "caption": "B-roll is what makes your film feel cinematic. Here's how to nail it every time. #filmmaking #broll #cinematography",
+    "name": "Skin Tone Protection",
+    "subtitle": "App Promotion",
+    "caption": "When FrameCoach detects people in your frame, skin tone exposure gets prioritised. Using YCbCr colour space analysis with diversity-inclusive detection ranges, it ensures faces are properly exposed — even when the background is challenging. Because a blown-out sky is forgivable. A blown-out face is not.\n\n#filmmaking #filmmaker #cinematography #skintones #exposure #cameracoach #framecoach #filmtips #portrait #camerasettings",
+    "tiktokCaption": "Skin tone protection. FrameCoach prioritises faces in every frame.",
+    "tiktokDescription": "One of the most important features in FrameCoach — and one that separates it from basic exposure tools — is skin tone protection.\n\nHere's the problem: when you're shooting a person against a bright background (backlit, window, sky), your camera's meter tries to average the entire scene. The result is often a choice between properly exposed skin and a properly exposed background. Most of the time, the background wins and your subject's face ends up underexposed. Or you compensate and the background blows out.\n\nFrameCoach handles this differently because it analyses people and backgrounds separately.\n\nFirst, on-device person detection (using Apple's Vision framework) identifies where people are in your frame. If full-body detection fails, it falls back to face detection. This gives FrameCoach bounding boxes for every person in the shot.\n\nSecond, the clipping analysis runs twice: once for the subject regions (inside the bounding boxes) and once for the background (everything else). A weighted subtraction isolates the two. This means FrameCoach can tell you: 'The sky is clipping at 15% but your subject's skin is correctly exposed. The sky clipping is acceptable for your protect-highlights goal.'\n\nThird, skin tone detection converts pixels to YCbCr colour space using the ITU-R BT.601 standard. Two detection ranges ensure diversity:\n\nStandard range (lighter skin): Y>80, Cb 77-127, Cr 133-173\nExtended range (darker skin): Y>50, Cb 77-127, Cr 133-173\nPlus an RGB fallback: R>95, G>40, B>20, R-G>15\n\nThe system classifies skin exposure as underexposed (average luminance <80), correctly exposed (80-200), or overexposed (>200). It also flags when both light and dark skin tones are present in the same frame — a particularly challenging exposure scenario that many filmmakers struggle with.\n\nWhen skin tones are detected and people are in the frame, the entire recommendation system shifts to prioritise face exposure. A blown-out sky behind a correctly exposed face? Acceptable. A blown-out face? Never acceptable. The deterministic math engine adjusts its calculations accordingly.\n\nThis is what inclusive, subject-aware exposure coaching looks like.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#skintones", "#exposure", "#cameracoach", "#framecoach", "#filmtips", "#portrait", "#camerasettings", "#filmmakersoftiktok", "#indiefilmmaker", "#AIfilmmaking", "#filmmakingtips", "#directorofphotography"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "26-focal-lengths-explained",
-    "name": "Focal Lengths Explained",
-    "subtitle": "Lens Guide",
-    "caption": "Focal lengths explained simply. Choose the right lens for every scene. #filmmaking #lenses #cinematography",
+    "name": "Why ISO Matters",
+    "subtitle": "Filmmaker Education",
+    "caption": "ISO isn't just a number. It affects noise, dynamic range, and image quality. FrameCoach knows your camera's ISO characteristics — dual-native thresholds, noise floor profiles, DR at every ISO level. It recommends the optimal ISO for your scene and explains why. Learn the principle, not just the setting.\n\n#filmmaking #filmmaker #cinematography #ISO #exposure #cameracoach #framecoach #filmtips #camerasettings #dynamicrange",
+    "tiktokCaption": "Why ISO matters more than you think. FrameCoach explains it.",
+    "tiktokDescription": "Every filmmaker knows what ISO does at a surface level: higher ISO means brighter image, lower ISO means darker image. But the real story of ISO is much more nuanced, and it's something FrameCoach coaches you through.\n\nISO affects three critical things in your image:\n\n1. Noise. As ISO increases, electronic noise increases. Your shadows get grainy, your colours get less accurate, and fine detail gets lost. But the relationship isn't linear — it depends on your specific camera sensor.\n\n2. Dynamic range. This is the one most filmmakers underestimate. Your camera's dynamic range DECREASES as ISO increases. FrameCoach calculates this precisely: DR = baseDR - 0.5 x log2(ISO / baseISO). So if your camera has 13 stops of DR at ISO 100, at ISO 1600 it has roughly 11 stops. That's 2 stops less latitude to recover highlights or shadows in post. At ISO 6400, you're down to about 9.5 stops. The implications for your highlight and shadow detail are massive.\n\n3. Dual-native ISO. Many modern cinema and hybrid cameras have dual-native ISO circuits — two analog amplification stages that each produce a 'clean' ISO. For example, a camera might have native ISOs at 800 and 12800. Shooting at these values (or close to them) gives you significantly cleaner images than shooting at ISOs between them. FrameCoach's camera database includes dual-native ISO thresholds for supported cameras and factors this into its recommendations.\n\nIn FrameCoach's deterministic math engine, ISO is the first setting adjusted in most scenarios (the default priority order is ISO → Aperture → Shutter Speed). Why? Because ISO is the 'safest' adjustment — it doesn't affect depth of field (like aperture) or motion characteristics (like shutter speed). It only affects noise and dynamic range, which are technical tradeoffs the math engine can calculate precisely.\n\nWhen FrameCoach recommends an ISO change, it's not just lowering a number. It's calculating the optimal balance between noise, dynamic range, and exposure for your specific camera at your current scene's requirements. And it explains the reasoning so you understand the tradeoff.\n\n'Lower ISO from 800 to 200 — you have enough ambient light and this gives you 1.5 additional stops of dynamic range for your protect-highlights goal.'\n\nThat's coaching. Not just what to change, but why it matters.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#ISO", "#exposure", "#cameracoach", "#framecoach", "#filmtips", "#camerasettings", "#dynamicrange", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#filmmakingtools", "#cameragear"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "27-3-point-lighting",
-    "name": "3-Point Lighting",
-    "subtitle": "Lighting Setup",
-    "caption": "The 3-point lighting setup every filmmaker should master. Here's how. #filmmaking #lighting #filmtips",
+    "name": "Connect. Describe. Shoot.",
+    "subtitle": "App Promotion",
+    "caption": "Three steps. That's it.\n\n1. Connect your camera\n2. Describe your creative vision\n3. Shoot with confidence\n\nFrameCoach handles everything in between — exposure analysis, settings calculation, composition coaching, one-tap auto-apply. Connect. Describe. Shoot.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #indiefilm #camerasettings #filmtips #connect #shoot",
+    "tiktokCaption": "Connect. Describe. Shoot. Three steps to confident filmmaking.",
+    "tiktokDescription": "The entire FrameCoach experience boils down to three actions. Connect. Describe. Shoot.\n\nConnect: Add your camera's WiFi profile (scan QR code or enter SSID). Tap to connect. FrameCoach joins your camera's WiFi network, establishes the dual-pipe architecture (WiFi for camera, cellular for AI), runs the patient connection algorithm (testing connection, starting live view, fetching the first frame), and displays your camera's live view in real time. All you did was tap a button.\n\nDescribe: Type your creative intent in plain English. Not technical parameters — creative intent. 'Protect the highlights in this backlit scene.' 'Warm mood, shallow depth of field.' 'Ensure proper exposure for the interview subject.' 'Recover shadow detail in the foreground.' FrameCoach understands creative language and maps it to technical goals with specific tolerance bands (protect-highlights allows only 3% highlight clipping, recover-shadows allows only 5% shadow clipping, balanced allows 8% and 12% respectively).\n\nShoot: FrameCoach captures a frame, runs the full analysis pipeline in seconds (histogram, zone system, clipping, skin tones, dynamic range, scene classification, convergence assessment, deterministic math engine, AI coaching, composition analysis), delivers 0-3 prioritised recommendations with explanations, and offers one-tap auto-apply. If the system determines your settings are already optimal, you get a green 'You're good to shoot!' card. If adjustments are needed, each recommendation has a current value, suggested value, reasoning, and Apply button.\n\nThe entire cycle — from describing your vision to having settings applied to your camera — takes seconds. And because the system includes anti-oscillation (hysteresis filtering), you won't get contradictory recommendations between captures. If you asked for the same thing a minute ago and the scene hasn't changed significantly, FrameCoach remembers and stays consistent.\n\nThree actions. The technical complexity lives behind the scenes. You see: Connect. Describe. Shoot.\n\nframecoach.io — the decision layer for your camera.",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#indiefilm", "#cameracoach", "#framecoach", "#camerasettings", "#filmtips", "#solofilmmaker", "#AIfilmmaking", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#filmmakingtools", "#filmset"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "28-audio-tips",
-    "name": "Audio Tips",
-    "subtitle": "Audio Series",
-    "caption": "Bad audio ruins good films. Here are the tips that will save your sound. #filmmaking #audio #filmtips",
+    "name": "Golden Hour Settings",
+    "subtitle": "Filmmaker Education",
+    "caption": "Golden hour: beautiful light, tricky exposure. Harsh backlight, rapidly changing conditions, blown highlights if you're not careful. FrameCoach reads your golden hour scene in real time — clipping detection, skin tone protection, dynamic range analysis — and coaches you through it before the light disappears.\n\n#filmmaking #filmmaker #cinematography #goldenhour #exposure #cameracoach #framecoach #filmtips #sunset #camerasettings",
+    "tiktokCaption": "Golden hour settings nailed in seconds. FrameCoach coaches it live.",
+    "tiktokDescription": "Golden hour is every filmmaker's favourite light — and every filmmaker's most stressful exposure challenge.\n\nThe light is beautiful but harsh. You've got extreme backlight. Highlights are blowing out in the sky. Shadows are deep on the subject's face. The dynamic range exceeds what your camera can capture in a single exposure. And the worst part? The light is changing minute by minute. You don't have time to fiddle with settings.\n\nThis is exactly the scenario FrameCoach was built for.\n\nYou connect your camera and type: 'protect highlights, warm golden hour mood.' FrameCoach captures a frame and runs the full analysis:\n\nThe histogram shows a bimodal distribution — two peaks separated by 5+ zones. That tells the system this is a genuine high dynamic range scene, not a settings error.\n\nClipping detection shows highlights at 12% (sky) and shadows at 4% (subject's shadow side). Subject-aware analysis separates the two: the subject's highlights are only at 2% (within tolerance), but the background sky is clipping significantly.\n\nSkin tone analysis detects properly exposed skin in the Cb/Cr ranges but flags the shadow side as approaching underexposure.\n\nDynamic range estimation shows you're using 9 of your camera's available 11 stops at current ISO — there's room to work.\n\nThe goal parser classifies 'protect highlights' with a tight 3% highlight tolerance. The convergence assessment determines: needs_adjustment.\n\nThe math engine calculates: lower ISO by 2 stops (brings highlights from 12% to within tolerance). It checks the priority order (ISO first for protect-highlights goals), verifies the target ISO is within your camera's available range, and snaps to the nearest 1/3-stop increment.\n\nThe coaching layer delivers: 'Lower ISO from 800 to 200. Your sky highlights are clipping at 12% — bringing ISO down 2 stops protects them while keeping your subject's skin tones in the correct exposure zone. Shadow detail is preserved with headroom.'\n\nYou tap Apply. ISO drops to 200. You shoot.\n\nTotal time: under 10 seconds. Golden hour saved.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#goldenhour", "#exposure", "#cameracoach", "#framecoach", "#filmtips", "#sunset", "#camerasettings", "#filmmakersoftiktok", "#indiefilmmaker", "#AIfilmmaking", "#filmmakingtips", "#goldenhourphotography"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "29-directing-non-actors",
-    "name": "Directing Non-Actors",
-    "subtitle": "Directing Tips",
-    "caption": "Not everyone on set is an actor. Here's how to direct non-actors like a pro. #filmmaking #directing #filmtips",
+    "name": "No Film Crew Required",
+    "subtitle": "App Promotion",
+    "caption": "Solo filmmaker? Small crew? No dedicated DP? FrameCoach was built for you. Real-time AI cinematography coaching that reads your scene, calculates the exposure, and coaches you through the shot. The technical confidence of a full camera department — on your phone.\n\n#filmmaking #filmmaker #cinematography #cameracoach #framecoach #solofilmmaker #indiefilm #onepersoncrew #filmtips #camerasettings",
+    "tiktokCaption": "No crew? No DP? No problem. FrameCoach coaches you on set.",
+    "tiktokDescription": "The reality of indie filmmaking in 2026: most of us are one-person crews. Or two-person crews where both people are doing three jobs each. A dedicated director of photography? That's a luxury most indie productions can't afford.\n\nBut the technical decisions a DP makes — ISO, aperture, shutter speed, white balance, composition, lighting adjustments — still need to happen. And they need to happen correctly, in real time, under pressure.\n\nThat's the gap FrameCoach fills.\n\nWhen you're the director AND the camera operator, you're making creative decisions about performance and story while simultaneously trying to nail the technical execution. It's cognitive overload. Something always suffers. Usually it's the exposure — because checking the histogram and calculating whether you need to adjust ISO or open up the aperture takes your attention away from the creative work.\n\nFrameCoach takes the exposure calculation off your plate entirely. You describe what you want creatively: 'warm mood, shallow depth of field, protect the skin tones.' The app captures your frame, runs the physics, and tells you exactly what to change. One tap to apply it to your camera. Done. You're back to directing.\n\nThe composition coaching means you also get a second pair of eyes on your framing. Not just exposure numbers, but feedback like 'your subject is dead centre — the leading line from the staircase could create more dynamic tension if you shifted to a rule-of-thirds placement.' The kind of observation a DP would make between takes.\n\nAnd because FrameCoach knows your camera's specific capabilities and limits, every recommendation is hardware-aware. It won't suggest an ISO your camera doesn't support or an aperture your lens can't achieve.\n\nThe result: solo filmmakers producing work that looks like it had a full camera department behind it. Not because of expensive gear. Because of informed decisions.\n\nYou are the crew. FrameCoach is your DP.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#solofilmmaker", "#cameracoach", "#framecoach", "#indiefilm", "#onepersoncrew", "#filmtips", "#camerasettings", "#filmmakersoftiktok", "#indiefilmmaker", "#AIfilmmaking", "#filmmakingtips", "#filmmakingtools"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   },
   {
     "id": "30-story-in-60-seconds",
-    "name": "Story in 60 Seconds",
-    "subtitle": "Short-Form Series",
-    "caption": "Tell a complete story in 60 seconds. The short-form filmmaker's guide. #filmmaking #shortfilm #storytelling",
+    "name": "Composition Analysis Explained",
+    "subtitle": "Filmmaker Education",
+    "caption": "FrameCoach's composition analysis reads 6 aspects of your frame:\n\n1. Rule of thirds\n2. Subject placement\n3. Visual balance\n4. Framing\n5. Leading lines\n6. Depth\n\nEach gets an observation, a suggestion, and a strength rating. Not generic advice — feedback based on YOUR actual frame.\n\n#filmmaking #filmmaker #cinematography #composition #cameracoach #framecoach #ruleofthirds #framing #filmtips #directorofphotography",
+    "tiktokCaption": "6 things FrameCoach sees in your composition. In real time.",
+    "tiktokDescription": "FrameCoach's composition analysis is powered by a multimodal AI vision system that runs in parallel with the exposure coaching pipeline. It looks at your actual captured frame and analyses six specific aspects of visual composition.\n\nLet's break down each one.\n\n1. Rule of Thirds. The most fundamental composition guideline in visual arts. FrameCoach analyses where your subjects and key elements sit relative to the thirds grid — both the vertical and horizontal lines and the four power points where they intersect. It identifies whether key elements align with these compositional anchors or if they're placed randomly.\n\n2. Subject Placement. Beyond just thirds, where is your main subject in the frame? Is the placement intentional and serving the narrative? Centre placement feels formal and confrontational. Off-centre placement creates tension and allows the environment to tell part of the story. FrameCoach identifies your subject and evaluates whether their placement supports the story you're telling.\n\n3. Visual Balance. Every element in your frame has visual weight — determined by size, contrast, colour, and position. FrameCoach analyses whether the weight is distributed effectively. Symmetrical balance feels ordered and stable. Asymmetrical balance feels dynamic and engaging. Neither is right or wrong, but the choice should be intentional.\n\n4. Framing. Are you using elements within the scene as natural frames? Doorways, arches, windows, branches, architectural elements — these create depth, focus attention on your subject, and add visual sophistication to your composition. FrameCoach identifies potential framing elements and suggests how to use them.\n\n5. Leading Lines. Lines within your scene that guide the viewer's eye toward your subject or through the frame. Roads, fences, shadows, staircases, rivers — these create visual pathways that make your composition feel intentional and directed. FrameCoach identifies strong leading lines and suggests how to leverage them.\n\n6. Depth. Is there clear separation between foreground, midground, and background? Depth is what makes a 2D medium feel three-dimensional. FrameCoach evaluates whether your composition uses depth effectively and suggests ways to enhance it.\n\nFor each aspect, you get three things: an observation (what the AI sees), a suggestion (what you could do to improve), and a strength rating (strong, moderate, or weak). 1-3 tips per frame — specific to YOUR shot, not generic advice.\n\nframecoach.io",
+    "tiktokHashtags": ["#filmmaking", "#filmmaker", "#cinematography", "#composition", "#cameracoach", "#framecoach", "#ruleofthirds", "#framing", "#filmtips", "#directorofphotography", "#filmmakersoftiktok", "#indiefilmmaker", "#filmmakingtips", "#leadinglines", "#visualstorytelling"],
     "slideCount": 7,
-    "slides": [
-      "slide-01.png",
-      "slide-02.png",
-      "slide-03.png",
-      "slide-04.png",
-      "slide-05.png",
-      "slide-06.png",
-      "slide-07.png"
-    ]
+    "slides": ["slide-01.png", "slide-02.png", "slide-03.png", "slide-04.png", "slide-05.png", "slide-06.png", "slide-07.png"]
   }
 ]
