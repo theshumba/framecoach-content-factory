@@ -6,6 +6,7 @@ import GalleryPage from './pages/GalleryPage';
 import TrackerPage from './pages/TrackerPage';
 import AnalyticsPage from './pages/AnalyticsPage';
 import SettingsPage from './pages/SettingsPage';
+import OutreachPage from './pages/OutreachPage';
 import { loadManifest } from './store/contentStore';
 
 function Layout({ children }) {
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/tracker" element={<TrackerPage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/outreach" element={<OutreachPage />} />
           <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </Layout>

@@ -8,6 +8,7 @@ import {
   Clapperboard,
   Menu,
   X,
+  Send,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -16,6 +17,7 @@ const NAV_ITEMS = [
   { to: '/gallery', label: 'Gallery', icon: Images },
   { to: '/tracker', label: 'Posting Tracker', icon: ClipboardList },
   { to: '/analytics', label: 'Analytics', icon: BarChart3 },
+  { to: '/outreach', label: 'Outreach', icon: Send },
   { to: '/settings', label: 'Settings', icon: Settings },
 ];
 
