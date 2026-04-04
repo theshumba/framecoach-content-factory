@@ -18,6 +18,9 @@ import {
   Music2,
   Filter,
   X,
+  Copy,
+  ClipboardCheck,
+  PhoneCall,
 } from 'lucide-react';
 import {
   loadLeads,
@@ -27,6 +30,7 @@ import {
   getOutreachStats,
   exportLeadsCSV,
 } from '../store/outreachStore';
+import { generateOutreachMessages } from '../utils/messageTemplates';
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -124,6 +128,169 @@ function ChannelBadge({ channel, status, onCycle }) {
       <Icon size={12} style={!DEFAULT_STATUSES.includes(status) ? { color: channel.color } : undefined} />
       <span className="hidden sm:inline">{style.label}</span>
     </button>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Copy Button
+// ---------------------------------------------------------------------------
+
+function CopyBtn({ text, label }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      // Fallback
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    }
+  };
+
+  return (
+    <button
+      onClick={handleCopy}
+      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium transition-all duration-150 ${
+        copied
+          ? 'bg-[#22C55E]/20 text-[#22C55E]'
+          : 'bg-[#2A2A2A] text-[#8E8E8E] hover:text-[#f7f7f7] hover:bg-[#333]'
+      }`}
+    >
+      {copied ? <ClipboardCheck size={12} /> : <Copy size={12} />}
+      {copied ? 'Copied!' : label || 'Copy'}
+    </button>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Outreach Messages Panel
+// ---------------------------------------------------------------------------
+
+const MESSAGE_CHANNELS = [
+  { key: 'instagramDm', label: 'Instagram DM', icon: Instagram, color: '#E1306C' },
+  { key: 'tiktokDm', label: 'TikTok DM', icon: Music2, color: '#69C9D0' },
+  { key: 'email', label: 'Email', icon: Mail, color: '#3B82F6' },
+  { key: 'linkedin', label: 'LinkedIn', icon: Linkedin, color: '#0A66C2' },
+  { key: 'text', label: 'Text / iMessage', icon: MessageSquare, color: '#F59E0B' },
+  { key: 'phone', label: 'Phone Script', icon: PhoneCall, color: '#22C55E' },
+];
+
+function OutreachMessages({ lead }) {
+  const messages = useMemo(() => generateOutreachMessages(lead), [lead]);
+
+  // Determine which channels to show based on available contact info
+  const hasContact = {
+    instagramDm: !!lead.instagram,
+    tiktokDm: !!lead.tiktok,
+    email: !!lead.email,
+    linkedin: !!lead.linkedin,
+    text: !!lead.phone,
+    phone: !!lead.phone,
+  };
+
+  // If lead has no specific contacts, show all channels with generic messages
+  const hasAnyContact = Object.values(hasContact).some(Boolean);
+  const showAll = !hasAnyContact;
+
+  return (
+    <div className="mt-4 pt-4 border-t border-[#2A2A2A]">
+      <div className="flex items-center gap-2 mb-3">
+        <Send size={13} className="text-[#E32326]" />
+        <span className="text-[#f7f7f7] text-xs font-semibold uppercase tracking-wider">Outreach Messages</span>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        {MESSAGE_CHANNELS.map(ch => {
+          if (!showAll && !hasContact[ch.key]) return null;
+
+          const Icon = ch.icon;
+          const msg = messages[ch.key];
+
+          // Phone — talking points
+          if (ch.key === 'phone') {
+            return (
+              <div key={ch.key} className="bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg overflow-hidden">
+                <div className="flex items-center gap-2 px-3 py-2 border-b border-[#2A2A2A]" style={{ backgroundColor: `${ch.color}10` }}>
+                  <Icon size={13} style={{ color: ch.color }} />
+                  <span className="text-xs font-medium" style={{ color: ch.color }}>{ch.label}</span>
+                </div>
+                <div className="px-3 py-3">
+                  <ul className="space-y-1.5">
+                    {msg.talkingPoints.map((point, i) => (
+                      <li key={i} className="text-[#c0c0c0] text-xs leading-relaxed flex gap-2">
+                        <span className="text-[#8E8E8E] shrink-0">{i + 1}.</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          }
+
+          // Email — subject + body
+          if (ch.key === 'email') {
+            return (
+              <div key={ch.key} className="bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg overflow-hidden">
+                <div className="flex items-center justify-between px-3 py-2 border-b border-[#2A2A2A]" style={{ backgroundColor: `${ch.color}10` }}>
+                  <div className="flex items-center gap-2">
+                    <Icon size={13} style={{ color: ch.color }} />
+                    <span className="text-xs font-medium" style={{ color: ch.color }}>{ch.label}</span>
+                  </div>
+                  <CopyBtn text={`Subject: ${msg.subject}\n\n${msg.body}`} label="Copy All" />
+                </div>
+                <div className="px-3 py-3 space-y-2">
+                  <div>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[#8E8E8E] text-[10px] uppercase tracking-wider font-semibold">Subject</span>
+                      <CopyBtn text={msg.subject} label="Copy" />
+                    </div>
+                    <div className="text-[#f7f7f7] text-xs bg-[#141414] rounded px-2 py-1.5 border border-[#2A2A2A]">
+                      {msg.subject}
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[#8E8E8E] text-[10px] uppercase tracking-wider font-semibold">Body</span>
+                      <CopyBtn text={msg.body} label="Copy" />
+                    </div>
+                    <div className="text-[#c0c0c0] text-xs bg-[#141414] rounded px-2 py-1.5 border border-[#2A2A2A] whitespace-pre-line leading-relaxed max-h-[200px] overflow-y-auto">
+                      {msg.body}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+
+          // All other channels — single message
+          return (
+            <div key={ch.key} className="bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg overflow-hidden">
+              <div className="flex items-center justify-between px-3 py-2 border-b border-[#2A2A2A]" style={{ backgroundColor: `${ch.color}10` }}>
+                <div className="flex items-center gap-2">
+                  <Icon size={13} style={{ color: ch.color }} />
+                  <span className="text-xs font-medium" style={{ color: ch.color }}>{ch.label}</span>
+                </div>
+                <CopyBtn text={msg.message} />
+              </div>
+              <div className="px-3 py-3">
+                <div className="text-[#c0c0c0] text-xs leading-relaxed whitespace-pre-line">
+                  {msg.message}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
@@ -294,6 +461,9 @@ function LeadRow({ lead, onChannelCycle, onNotesChange }) {
                 />
               </div>
             </div>
+
+            {/* Outreach messages */}
+            <OutreachMessages lead={lead} />
           </td>
         </tr>
       )}
