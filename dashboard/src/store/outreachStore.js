@@ -30,19 +30,45 @@ function writeStorage(leads) {
 
 export async function loadLeads() {
   const existing = readStorage();
-  if (existing && existing.length > 0) return existing;
 
   // First load — seed from bundled JSON
-  try {
-    const res = await fetch(`${import.meta.env.BASE_URL}leads.json`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const leads = await res.json();
-    writeStorage(leads);
-    return leads;
-  } catch (err) {
-    console.error('[outreachStore] Failed to load leads.json:', err);
-    return [];
+  if (!existing || existing.length === 0) {
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}leads.json`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const leads = await res.json();
+      writeStorage(leads);
+      return leads;
+    } catch (err) {
+      console.error('[outreachStore] Failed to load leads.json:', err);
+      return [];
+    }
   }
+
+  // Returning user — check if pre-baked messages have been added since last load.
+  // If any cached lead lacks `messages`, pull from JSON and merge by id, preserving
+  // per-user channel status and notes.
+  const needsMessagesMigration = existing.some(l => !l.messages);
+  if (needsMessagesMigration) {
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}leads.json`);
+      if (res.ok) {
+        const fresh = await res.json();
+        const freshById = new Map(fresh.map(l => [l.id, l]));
+        const merged = existing.map(l => {
+          const f = freshById.get(l.id);
+          if (!f) return l;
+          return { ...l, messages: f.messages || l.messages };
+        });
+        writeStorage(merged);
+        return merged;
+      }
+    } catch (err) {
+      console.error('[outreachStore] Failed to migrate messages:', err);
+    }
+  }
+
+  return existing;
 }
 
 export function getLeads() {
