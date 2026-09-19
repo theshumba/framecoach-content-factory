@@ -1,5 +1,7 @@
+import React from 'react';
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
 import {Background} from '../components/Background';
+import {Swipe} from '../components/SFX';
 import {HEADING_FONT, BODY_FONT} from '../fonts';
 import {BRAND} from '../brand';
 import type {TextScene as TextSceneData} from '../types';
@@ -19,40 +21,11 @@ export const TextScene: React.FC<{data: TextSceneData}> = ({data}) => {
   return (
     <AbsoluteFill>
       <Background bg={data.bg} />
-      <AbsoluteFill
-        style={{
-          justifyContent: 'flex-end',
-          padding: '0 80px 200px',
-        }}
-      >
-        <div style={{fontFamily: BODY_FONT, fontSize: 20, fontWeight: 600, letterSpacing: 4, textTransform: 'uppercase' as const, color: tagColor, marginBottom: 24, opacity: tagEntrance}}>
-          {data.tag}
-        </div>
-        <div
-          style={{
-            fontFamily: HEADING_FONT,
-            fontSize: 64,
-            letterSpacing: -1,
-            lineHeight: 1.05,
-            color: headColor,
-            marginBottom: 24,
-            opacity: titleEntrance,
-            transform: `translateY(${interpolate(titleEntrance, [0, 1], [30, 0])}px)`,
-          }}
-        >
-          {data.title}
-        </div>
-        <div
-          style={{
-            fontFamily: BODY_FONT,
-            fontSize: 28,
-            lineHeight: 1.55,
-            color: bodyColor,
-            opacity: bodyEntrance,
-          }}
-        >
-          {data.body}
-        </div>
+      <Swipe at={0} />
+      <AbsoluteFill style={{justifyContent: 'flex-end', padding: '0 80px 200px'}}>
+        <div style={{fontFamily: BODY_FONT, fontSize: 20, fontWeight: 600, letterSpacing: 4, textTransform: 'uppercase' as const, color: tagColor, marginBottom: 24, opacity: tagEntrance}}>{data.tag}</div>
+        <div style={{fontFamily: HEADING_FONT, fontSize: 64, letterSpacing: -1, lineHeight: 1.05, color: headColor, marginBottom: 24, opacity: titleEntrance, transform: `translateY(${interpolate(titleEntrance, [0, 1], [30, 0])}px)`}}>{data.title}</div>
+        <div style={{fontFamily: BODY_FONT, fontSize: 32, lineHeight: 1.55, color: bodyColor, opacity: bodyEntrance}}>{data.body}</div>
       </AbsoluteFill>
     </AbsoluteFill>
   );

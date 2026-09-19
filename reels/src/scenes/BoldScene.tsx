@@ -1,5 +1,7 @@
+import React from 'react';
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
 import {Background} from '../components/Background';
+import {Pop} from '../components/SFX';
 import {HEADING_FONT, BODY_FONT} from '../fonts';
 import {BRAND} from '../brand';
 import type {BoldScene as BoldSceneData} from '../types';
@@ -17,41 +19,10 @@ export const BoldScene: React.FC<{data: BoldSceneData}> = ({data}) => {
   return (
     <AbsoluteFill>
       <Background bg={data.bg} />
-      <AbsoluteFill
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '0 80px',
-        }}
-      >
-        <div
-          style={{
-            fontFamily: BODY_FONT,
-            fontSize: 20,
-            fontWeight: 600,
-            letterSpacing: 4,
-            textTransform: 'uppercase' as const,
-            color: tagColor,
-            marginBottom: 28,
-            opacity: tagEntrance,
-          }}
-        >
-          {data.tag}
-        </div>
-        <div
-          style={{
-            fontFamily: HEADING_FONT,
-            fontSize: 88,
-            letterSpacing: -1,
-            lineHeight: 1.0,
-            color: textColor,
-            textAlign: 'center',
-            opacity: entrance,
-            transform: `scale(${interpolate(entrance, [0, 1], [0.85, 1])})`,
-          }}
-        >
-          {data.text}
-        </div>
+      <Pop at={0.1} />
+      <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center', padding: '0 80px'}}>
+        <div style={{fontFamily: BODY_FONT, fontSize: 20, fontWeight: 600, letterSpacing: 4, textTransform: 'uppercase' as const, color: tagColor, marginBottom: 28, opacity: tagEntrance}}>{data.tag}</div>
+        <div style={{fontFamily: HEADING_FONT, fontSize: 88, letterSpacing: -1, lineHeight: 1.0, color: textColor, textAlign: 'center', opacity: entrance, transform: `scale(${interpolate(entrance, [0, 1], [0.85, 1])})`}}>{data.text}</div>
       </AbsoluteFill>
     </AbsoluteFill>
   );

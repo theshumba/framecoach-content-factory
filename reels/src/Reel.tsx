@@ -1,3 +1,4 @@
+import React from 'react';
 import {AbsoluteFill, useVideoConfig} from 'remotion';
 import {TransitionSeries, linearTiming} from '@remotion/transitions';
 import {fade} from '@remotion/transitions/fade';
@@ -25,23 +26,29 @@ export const Reel: React.FC<{data: ReelData}> = ({data}) => {
   const {fps} = useVideoConfig();
   const TRANSITION_FRAMES = Math.round(0.4 * fps);
 
+  const elements: React.ReactNode[] = [];
+  data.scenes.forEach((scene, i) => {
+    const frames = Math.round(scene.duration * fps);
+    elements.push(
+      <TransitionSeries.Sequence key={`s-${i}`} durationInFrames={frames}>
+        <SceneRenderer scene={scene} />
+      </TransitionSeries.Sequence>
+    );
+    if (i < data.scenes.length - 1) {
+      elements.push(
+        <TransitionSeries.Transition
+          key={`t-${i}`}
+          presentation={fade()}
+          timing={linearTiming({durationInFrames: TRANSITION_FRAMES})}
+        />
+      );
+    }
+  });
+
   return (
     <AbsoluteFill style={{backgroundColor: '#141414'}}>
       <TransitionSeries>
-        {data.scenes.map((scene, i) => {
-          const frames = Math.round(scene.duration * fps);
-          return (
-            <TransitionSeries.Sequence key={i} durationInFrames={frames}>
-              <SceneRenderer scene={scene} />
-              {i < data.scenes.length - 1 && (
-                <TransitionSeries.Transition
-                  presentation={fade()}
-                  timing={linearTiming({durationInFrames: TRANSITION_FRAMES})}
-                />
-              )}
-            </TransitionSeries.Sequence>
-          );
-        })}
+        {elements}
       </TransitionSeries>
       <Corners />
       <ProgressBar />
